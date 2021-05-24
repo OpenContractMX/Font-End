@@ -1,0 +1,84 @@
+@import "../../assets/scss/general";
+@import "../../assets/scss/mixins";
+@import "../../assets/scss/variables";
+
+.header {
+  width: 100vw;
+  height: 60px;
+  background-color: $color-dark-secondary;
+  display: flex;
+  justify-content: space-between;
+
+  &__container-logo {
+    display: inline-flex;
+    align-items: center;
+
+    &--logo {
+      width: 36px;
+      height: 36px;
+      transform: translateX(16px);
+      & img {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    &--name {
+      @include SizeLogoMobile;
+      color: $color-light-primary;
+      height: 36px;
+      transform: translateX(24px);
+      padding-top: 8px;
+    }
+  }
+
+  &__nav {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    &--icon-menu {
+      font-size: 32px;
+      color: $color-light-primary;
+      transform: translateX(-16px);
+    }
+
+    &--list {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      height: 140px;
+      background-color: $color-light-primary;
+      display: inline-flex;
+      flex-direction: column;
+      border-radius: 0 0 0 20px;
+
+      & .nav__list--home {
+        margin: 24px 0 4px 12px;
+      }
+
+      & .nav__list--statistic {
+        margin: 4px 0 4px 12px;
+      }
+
+      & .nav__list--about-us {
+        margin: 4px 0 24px 12px;
+      }
+
+      & .nav__list--home,
+      .nav__list--statistic,
+      .nav__list--about-us {
+        list-style: none;
+
+        & i {
+          font-size: 24px;
+          color: $color-dark-light;
+        }
+        & span {
+          color: $color-dark-primary;
+          @include tittleMobile;
+        }
+      }
+    }
+  }
+}

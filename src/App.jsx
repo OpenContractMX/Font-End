@@ -1,9 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { Header } from "./components/header";
+import "../src/assets/css/App.css";
 
 export const App = () => {
   return (
-    <div>
-      <h1>OpenContractMX</h1>
-    </div>
+    <Fragment>
+      <Header />
+    </Fragment>
   );
 };

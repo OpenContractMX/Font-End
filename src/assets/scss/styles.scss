@@ -1,3 +1,7 @@
 @import "./variables";
 @import "./mixins";
 @import "./general";
+
+body {
+  background-color: $color-light-secondary;
+}
