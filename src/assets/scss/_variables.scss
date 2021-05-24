@@ -1,0 +1,35 @@
+// Colors
+$color-light-primary: #ffffff;
+$color-light-secondary: #f2f4f4;
+$color-dark-primary: #1a233a;
+$color-dark-secondary: #272e48;
+$color-dark-light: #344775;
+$color-primary: #5a8dee;
+$color-secondary: #fdac41;
+$color-tertiary: #ff5b5c;
+$color-text-dark: #bdd1f8;
+
+//Fuentes
+
+// Size
+$base: 4px;
+
+// Size Destktop
+$sizeTitleDestktop: $base * 15;
+$sizeSubtitleDestktop: $base * 10;
+$sizeParagraphsDestktop: $base * 8;
+
+// Tablet
+$sizeTitleTablet: $base * 10;
+$sizeSubtitleTablet: $base * 8;
+$sizeParagraphsTablet: $base * 6;
+
+//Mobile
+$sizeTitleMobile: $base * 6;
+$sizeSubtitleMobile: $base * 5;
+$sizeParagraphsMobile: $base * 4;
+
+// Font Family
+
+$fontTitle: " Fauna One ", serif;
+$fontSecundary: " Josefin Slab ", serif;
