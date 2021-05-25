@@ -2,8 +2,8 @@ import React from "react";
 
 export const Statistic = () => {
   return (
-    <div>
+    <main>
       <h1>soy Statistic</h1>
-    </div>
+    </main>
   );
 };

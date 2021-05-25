@@ -2,8 +2,8 @@ import React from "react";
 
 export const AboutUs = () => {
   return (
-    <div>
+    <main>
       <h1>soy el AboutUs</h1>
-    </div>
+    </main>
   );
 };

@@ -2,8 +2,8 @@ import React from "react";
 
 export const Home = () => {
   return (
-    <div>
+    <main>
       <h1>soy el home</h1>
-    </div>
+    </main>
   );
 };
