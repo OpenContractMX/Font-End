@@ -3,8 +3,8 @@ import "./Footer.scss";
 
 export const Footer = () => {
   return (
-    <footer>
-      <p>soy el footer</p>
+    <footer className="footer">
+      <p className="footer--Copyright">Copyright</p>
     </footer>
   );
 };

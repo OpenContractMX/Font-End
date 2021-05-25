@@ -6,9 +6,8 @@ export const Layout = (props) => {
   // const children = props.children;
   return (
     <Fragment>
-      {props.children}
       <Header />
-      <h1>soy el main </h1>
+      {props.children}
       <Footer />
     </Fragment>
   );

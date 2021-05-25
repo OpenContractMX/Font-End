@@ -70,14 +70,16 @@
       .nav__list--about-us {
         list-style: none;
 
-        & i {
-          font-size: 24px;
-          color: $color-dark-light;
-        }
-        & span {
+        & a {
+          text-decoration: none;
           color: $color-dark-primary;
-          padding-left: 4px;
           @include tittleMobile;
+
+          & i {
+            font-size: 24px;
+            color: $color-dark-light;
+            padding-right: 4px;
+          }
         }
       }
     }

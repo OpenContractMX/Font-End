@@ -1,3 +1,19 @@
 @import "../../assets/scss/reset";
 @import "../../assets/scss/variables";
 @import "../../assets/scss/mixins";
+
+.footer {
+  width: 100vw;
+  height: 60px;
+  background-color: $color-dark-secondary;
+  position: fixed;
+  bottom: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &--Copyright {
+    @include tittleMobile;
+    color: $color-light-primary;
+  }
+}
