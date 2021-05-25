@@ -1,9 +1,11 @@
 import React from "react";
+import { FilterCategory } from "../../components/filter-category";
+import "./Statistic.scss";
 
 export const Statistic = () => {
   return (
-    <main>
-      <h1>soy Statistic</h1>
+    <main className="container-statistic">
+      <FilterCategory />
     </main>
   );
 };
