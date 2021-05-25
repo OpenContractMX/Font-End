@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss/_general.scss","../scss/styles.scss","../scss/_variables.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;;;AAGF;EACE;;;ACHF;EACE,kBCHsB","file":"App.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/_reset.scss","../scss/styles.scss","../scss/_variables.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;;;AAGF;EACE;;;ACHF;EACE,kBCHsB","file":"App.css"}

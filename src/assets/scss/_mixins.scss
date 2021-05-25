@@ -12,13 +12,13 @@
 }
 
 @mixin subTittleMobile {
-  font-family: $fontSecundary;
+  font-family: $fontSecondary;
   font-size: $sizeSubtitleMobile;
   font-weight: bold;
 }
 
 @mixin ParagraphsMobile {
-  font-family: $fontSecundary;
+  font-family: $fontSecondary;
   font-size: $sizeParagraphsMobile;
   font-weight: 500;
 }
@@ -35,18 +35,19 @@
 }
 
 @mixin subTittleTablet {
-  font-family: $fontSecundary;
+  font-family: $fontSecondary;
   font-size: $sizeSubtitleTablet;
   font-weight: bold;
 }
 
 @mixin ParagraphsTablet {
-  font-family: $fontSecundary;
+  font-family: $fontSecondary;
   font-size: $sizeParagraphsTablet;
   font-weight: 500;
 }
 
 // --------------Desktop------------------
+
 @mixin SizeLogoDesktop {
   font-family: $fontTitle;
   font-size: $sizeLogoMobile;
@@ -58,13 +59,13 @@
 }
 
 @mixin subTittleDesktop {
-  font-family: $fontSecundary;
+  font-family: $fontSecondary;
   font-size: $sizeSubtitleDestktop;
   font-weight: bold;
 }
 
 @mixin ParagraphsDesktop {
-  font-family: $fontSecundary;
+  font-family: $fontSecondary;
   font-size: $sizeParagraphsDestktop;
   font-weight: 500;
 }

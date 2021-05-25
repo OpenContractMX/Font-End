@@ -1,6 +1,6 @@
-@import "../../assets/scss/general";
-@import "../../assets/scss/mixins";
+@import "../../assets/scss/reset";
 @import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
 
 .header {
   width: 100vw;
@@ -76,6 +76,7 @@
         }
         & span {
           color: $color-dark-primary;
+          padding-left: 4px;
           @include tittleMobile;
         }
       }
