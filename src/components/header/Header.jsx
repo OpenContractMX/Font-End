@@ -10,7 +10,17 @@ export const Header = () => {
     aboutUs: "Sobre Nosotros",
   };
 
+  const Toggle = () => {
+    const toBeToggledMenu = document.getElementById("menu");
+    if (toBeToggledMenu.style.display === "none") {
+      toBeToggledMenu.style.display = "block";
+    } else {
+      toBeToggledMenu.style.display = "none";
+    }
+  }
+
   return (
+    
     <header className="header">
       <div className="header__container-logo">
         <figure className="header__container-logo--logo">
@@ -21,8 +31,8 @@ export const Header = () => {
         <span className="header__container-logo--name">OpenContractMX</span>
       </div>
       <nav className="header__nav">
-        <i className="header__nav--icon-menu fas fa-bars"></i>
-        <ul className="header__nav--list">
+        <i className="header__nav--icon-menu fas fa-bars" onClick={Toggle}></i>
+        <ul className="header__nav--list" id="menu">
           <li className="nav__list--home">
             <Link to="/" className="list__home--name">
               <i className="list__home--icon-home fas fa-home"></i>
