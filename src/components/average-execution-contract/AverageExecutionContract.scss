@@ -2,7 +2,7 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/mixins";
 
-.card-Average-contract {
+.card-average-contract {
   width: 200px;
   height: 100px;
   margin: 40px 0;
@@ -17,7 +17,8 @@
     margin: 12px 12px 8px 12px;
   }
 
-  &--quantity {
+  &--quantity,
+  &--quantity span {
     @include ParagraphsMobile;
     color: $color-dark-primary;
     text-align: center;
