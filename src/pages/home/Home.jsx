@@ -1,9 +1,11 @@
 import React from "react";
+import "./Home.scss";
+
 
 export const Home = () => {
   return (
-    <main>
-      <h1>soy el home</h1>
+    <main className="home">
+      <h1 className="home__title">OpenContractMX</h1>
     </main>
   );
 };
