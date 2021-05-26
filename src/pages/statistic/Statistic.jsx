@@ -4,6 +4,7 @@ import { FilterCategory } from "../../components/filter-category";
 import { CardTotalContacts } from "../../components/card-total-contact";
 import { ChartsContractsExpenses } from "../../components/charts-contracts-expenses";
 import { ContractPerMonth } from "../../components/contrac-per-month";
+import { TypeOfContract } from "../../components/type-of-contract";
 
 import "./Statistic.scss";
 
@@ -14,6 +15,7 @@ export const Statistic = () => {
       <CardTotalContacts />
       <ChartsContractsExpenses />
       <ContractPerMonth />
+      <TypeOfContract />
     </main>
   );
 };
