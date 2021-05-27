@@ -10,12 +10,7 @@ export const SectionContracts = () => {
           <h3>Dependencia:</h3>
           <p>Secretaría de Comunicaciones y Transportes</p>
           <h3>Contrato:</h3>
-          <p>
-            El servicio de Comunicación Unificada San Fandila – México, y
-            Servicios de bienes telemáticos, Mantenimiento preventivo y
-            correctivo de hardware, PC’s y periféricos, firewall, switch y
-            Access point.
-          </p>
+          <p>El servicio de Comunicación Unificada San Fandila</p>
           <h3>Valor:</h3>
           <p>
             20000 <span>MXN</span>
