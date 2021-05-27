@@ -4,9 +4,9 @@
 
 .nav-contracts {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 24px;
+  // display: flex;
+  // justify-content: space-between;
+  margin: 24px 0 24px 0;
 
   &--btn-volver,
   &--ver-todos {
@@ -23,7 +23,9 @@
       margin-right: 8px;
     }
   }
-
+  &--btn-volver {
+    position: fixed;
+  }
   &--ver-todos {
     background-color: $color-light-primary;
     color: $color-dark-primary;

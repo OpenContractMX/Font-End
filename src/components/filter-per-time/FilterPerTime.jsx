@@ -18,7 +18,7 @@ export const FilterPerTime = () => {
     12,
   ];
 
-  const quarters = ["Trimestre", 1.0, 2.0, 3.0, 4.0];
+  const quarters = ["Trimestre", "Todos", 1.0, 2.0, 3.0, 4.0];
 
   return (
     <section className="filter-time">

@@ -8,14 +8,14 @@ export const NavOfContracts = () => {
     <nav className="nav-contracts">
       <Link to="/statistic">
         <button type="button" className="nav-contracts--btn-volver">
-          <i class="fas fa-arrow-left icon-volver"></i>
+          <i className="fas fa-arrow-left icon-volver"></i>
           Volver
         </button>
       </Link>
 
-      <button type="button" className="nav-contracts--ver-todos">
+      {/* <button type="button" className="nav-contracts--ver-todos">
         <span>Ver todos</span>
-      </button>
+      </button> */}
     </nav>
   );
 };
