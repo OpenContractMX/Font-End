@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./CardTotalContracts.scss";
 
 export const CardTotalContacts = () => {
@@ -15,9 +16,11 @@ export const CardTotalContacts = () => {
           <span>MX</span>
         </span>
       </h2>
-      <button type="button" className="btn-ver-todos">
-        Ver todos
-      </button>
+      <Link to="/contracts">
+        <button type="button" className="btn-ver-todos">
+          Ver todos
+        </button>
+      </Link>
     </div>
   );
 };

@@ -2,7 +2,7 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/mixins";
 
-.filter-category {
+.filter-time {
   width: 100%;
 
   &--title {
@@ -16,15 +16,9 @@
     margin-top: 12px;
     display: flex;
     justify-content: space-evenly;
-    // position: relative;
 
-    // &--icon-category {
-    //   font-size: 28px;
-    //   color: $color-dark-secondary;
-    //   position: absolute;
-    // }
-    &--category,
-    &--years {
+    &--month,
+    &--quarter {
       @include subTittleMobile;
       font-weight: bold;
       border: none;
@@ -36,7 +30,7 @@
       box-shadow: $shadow-light;
     }
 
-    &--years {
+    &--month {
       width: 84px;
       padding: 4px 10px;
     }
