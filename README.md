@@ -1,4 +1,4 @@
-# Font-End
+# Frontend
 
 OpenContracMX challenge #4 of Platzi Master.
 
