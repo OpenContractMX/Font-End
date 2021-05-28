@@ -20,7 +20,6 @@ export const Header = () => {
   }
 
   return (
-    
     <header className="header">
       <div className="header__container-logo">
         <figure className="header__container-logo--logo">
