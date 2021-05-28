@@ -1,7 +1,17 @@
 import React from "react";
 import "./FilterCategory.scss";
 
-export const FilterCategory = () => {
+export const FilterCategory = ({ filter, setFilter }) => {
+  const handleOnChangeCategory = (e) => {
+    // console.log(e.target.value);
+    setFilter({ ...filter, category: e.target.value });
+  };
+
+  const handleOnChangeYear = (e) => {
+    // console.log(e.target.value);
+    setFilter({ ...filter, year: e.target.value });
+  };
+
   const categorys = [
     "Categoria",
     "Seguridad",
@@ -23,14 +33,20 @@ export const FilterCategory = () => {
     <section className="filter-category">
       <h2 className="filter-category--title">Filtar:</h2>
       <form className="filter-category__filter">
-        <select className="filter-category__filter--category">
+        <select
+          className="filter-category__filter--category"
+          onChange={handleOnChangeCategory}
+        >
           {categorys.map((category, index) => (
             <option key={index} value={category}>
               {category}
             </option>
           ))}
         </select>
-        <select className="filter-category__filter--years">
+        <select
+          className="filter-category__filter--years"
+          onChange={handleOnChangeYear}
+        >
           {years.map((year, index) => (
             <option key={index} value={year}>
               {year}

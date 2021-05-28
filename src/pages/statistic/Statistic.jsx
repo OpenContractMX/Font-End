@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { FilterCategory } from "../../components/filter-category";
 import { CardTotalContacts } from "../../components/card-total-contact";
@@ -10,10 +10,12 @@ import { AverageExecutionContract } from "../../components/average-execution-con
 import "./Statistic.scss";
 
 export const Statistic = () => {
+  const [filter, setFilter] = useState({ category: "", year: "" });
+
   return (
     <main className="container-statistic">
-      <FilterCategory />
-      <CardTotalContacts />
+      <FilterCategory setFilter={setFilter} filter={filter} />
+      <CardTotalContacts filter={filter} />
       <ChartsContractsExpenses />
       <ContractPerMonth />
       <TypeOfContract />

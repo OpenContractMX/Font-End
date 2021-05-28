@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./CardTotalContracts.scss";
 
-export const CardTotalContacts = () => {
+export const CardTotalContacts = ({ filter }) => {
+  console.log(filter);
+
   return (
     <div className="card-total-contract">
       <h2 className="card-total-contract--all">
@@ -16,7 +18,7 @@ export const CardTotalContacts = () => {
           <span>MX</span>
         </span>
       </h2>
-      <Link to="/contracts">
+      <Link to={`/contracts?category=${filter.category}&year=${filter.year}`}>
         <button type="button" className="btn-ver-todos">
           Ver todos
         </button>
