@@ -42,6 +42,9 @@
     color: $color-dark-primary;
   }
 
+  & a {
+    transform: translateY(18px);
+  }
   .btn-ver-todos {
     width: 104px;
     height: 28px;
@@ -50,7 +53,6 @@
     cursor: pointer;
     color: $color-light-primary;
     background-color: $color-dark-primary;
-    margin-top: 24px;
     @include ParagraphsMobile;
   }
 }

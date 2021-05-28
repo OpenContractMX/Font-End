@@ -1,12 +1,12 @@
 import React from "react";
 import "./SectionContracts.scss";
-import { useLocation } from "react-router-dom";
-import queryString from "query-string";
+// import { useLocation } from "react-router-dom";
+// import queryString from "query-string";
 
 export const SectionContracts = () => {
-  const { search } = useLocation();
-  const { category, year } = queryString.parse(search);
-  console.log(category, year);
+  // const { search } = useLocation();
+  // const { category, year } = queryString.parse(search);
+  // // console.log(category, year);
   //fetch
   return (
     <section className="container-contracts">
