@@ -4,11 +4,11 @@ import "./Header.scss";
 import logo from "../../assets/img/logo.png";
 
 export const Header = () => {
-  // const Menu = {
-  //   home: "Inicio",
-  //   statistic: "Estadistica",
-  //   aboutUs: "Sobre Nosotros",
-  // };
+  const Menu = {
+    home: "Inicio",
+    statistic: "Estadistica",
+    aboutUs: "Sobre Nosotros",
+  };
 
   return (
     <header className="header">
@@ -22,7 +22,7 @@ export const Header = () => {
       </div>
       <nav className="header__nav">
         <i className="header__nav--icon-menu fas fa-bars"></i>
-        {/* <ul className="header__nav--list">
+        <ul className="header__nav--list">
           <li className="nav__list--home">
             <Link to="/" className="list__home--name">
               <i className="list__home--icon-home fas fa-home"></i>
@@ -41,7 +41,7 @@ export const Header = () => {
               {Menu.aboutUs}
             </Link>
           </li>
-        </ul> */}
+        </ul>
       </nav>
     </header>
   );
