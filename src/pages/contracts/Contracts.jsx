@@ -5,7 +5,9 @@ import { SectionContracts } from "../../components/section-contracts";
 
 import "./Contracts.scss";
 
-export const Contracts = () => {
+export const Contracts = (props) => {
+  console.log(">>>", props);
+
   const [filterTime, setFilterTime] = useState({ month: "", quarter: "" });
 
   // console.log(filterTime, setFilterTime);

@@ -4,8 +4,8 @@ import { useLocation } from "react-router-dom";
 import queryString from "query-string";
 import axios from "axios";
 
-export const SectionContracts = (filterTime) => {
-  // console.log(filterTime);
+export const SectionContracts = ({ filterTime, query }) => {
+  console.log(">>>", filterTime, query);
   const [contracts, setContracts] = useState([]);
   const { search } = useLocation();
   const { category, year } = queryString.parse(search);
@@ -40,9 +40,10 @@ export const SectionContracts = (filterTime) => {
         `${API_BASE}category=${category}&year=${year}&trimester=${filterTime.filterTime.quarter}`,
         { headers: { "Access-Control-Allow-Origin": "*" } }
       );
+      setContracts(response.data.response.contracts);
 
-      let contractsQuarter = response.data.response.contracts;
-      console.log(contractsQuarter);
+      // let contractsQuarter = response.data.response.contracts;
+      // console.log(contractsQuarter);
       // console.log(`cantidade de contratos: ${resContracts.contracts_number}`);
     } catch (error) {
       // console.log(error);
