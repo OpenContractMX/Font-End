@@ -12,8 +12,26 @@ import "./Statistic.scss";
 
 export const Statistic = () => {
   const [filter, setFilter] = useState({ category: "Categoria", year: "Año" });
-  const [contractsChars, setContractsChars] = useState({});
-  // console.log(filter);
+  const [contractsChars, setContractsChars] = useState({
+    contracts_number: "sin datos",
+    inversion: 0,
+    execution_mean: 0,
+    months: {
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0,
+      6: 0,
+      7: 0,
+      8: 0,
+      9: 0,
+      10: 0,
+      11: 0,
+      12: 0,
+    },
+  });
+  // console.log(contractsChars);
 
   const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
 
@@ -23,30 +41,28 @@ export const Statistic = () => {
         `${API_BASE}category=${filter.category}&year=${filter.year}`,
         { headers: { "Access-Control-Allow-Origin": "*" } }
       );
-      console.log(response);
-      // setContractsChars(response);
+      // console.log(response);
+      setContractsChars(response.data.response);
 
       // console.log(response);
       // console.log(`cantidade de contratos: ${resContracts.contracts_number}`);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
-  // useEffect(() => {
-  //   if () {
-  //     getContracts();
-  //   }
-  // }, [contractsChars]);
+  useEffect(() => {
+    getContracts();
+  }, [filter]);
 
   return (
     <main className="container-statistic">
       <FilterCategory setFilter={setFilter} filter={filter} />
-      <CardTotalContacts filter={filter} />
-      <ChartsContractsExpenses />
-      <ContractPerMonth />
+      <CardTotalContacts filter={filter} contractsChars={contractsChars} />
+      <ChartsContractsExpenses contractsChars={contractsChars} />
+      <ContractPerMonth contractsChars={contractsChars} />
       {/* <TypeOfContract /> */}
-      <AverageExecutionContract />
+      <AverageExecutionContract contractsChars={contractsChars} />
     </main>
   );
 };
