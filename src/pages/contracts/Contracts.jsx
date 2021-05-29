@@ -5,12 +5,15 @@ import { SectionContracts } from "../../components/section-contracts";
 
 import "./Contracts.scss";
 
-export const Contracts = (props) => {
-  console.log(">>>", props);
+export const Contracts = () => {
+  // console.log(">>>", props);
 
-  const [filterTime, setFilterTime] = useState({ month: "", quarter: "" });
+  const [filterTime, setFilterTime] = useState({
+    month: "Mes",
+    quarter: "Trimestre",
+  });
 
-  // console.log(filterTime, setFilterTime);
+  // console.log(">>>h>>>", filterTime, setFilterTime);
 
   return (
     <main className="container-contracts">

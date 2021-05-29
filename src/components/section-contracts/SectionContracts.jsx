@@ -51,11 +51,11 @@ export const SectionContracts = ({ filterTime, query }) => {
   };
 
   useEffect(() => {
-    if (filterTime.month !== "Mes" && filterTime.month !== "") {
+    if (filterTime.month !== "Mes") {
       getContractsMonth();
       // console.log(filterTime);
     }
-    if (filterTime.quarter !== ("Trimestre", "")) {
+    if (filterTime.quarter !== "Trimestre") {
       getContractsQuarter();
       // console.log("fn ejecutada");
     }

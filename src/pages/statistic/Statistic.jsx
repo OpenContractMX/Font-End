@@ -11,8 +11,8 @@ import { AverageExecutionContract } from "../../components/average-execution-con
 import "./Statistic.scss";
 
 export const Statistic = () => {
-  const [filter, setFilter] = useState({ category: "", year: "" });
-  console.log(filter);
+  const [filter, setFilter] = useState({ category: "Categoria", year: "Año" });
+  // console.log(filter);
 
   return (
     <main className="container-statistic">

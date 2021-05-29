@@ -6,11 +6,13 @@ export const FilterCategory = ({ filter, setFilter }) => {
   const handleOnChangeCategory = (e) => {
     // console.log(e.target.value);
     setFilter({ ...filter, category: e.target.value });
+    // getContracts();
   };
 
   const handleOnChangeYear = (e) => {
     // console.log(e.target.value);
     setFilter({ ...filter, year: e.target.value });
+    // getContracts();
   };
 
   const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
@@ -21,18 +23,18 @@ export const FilterCategory = ({ filter, setFilter }) => {
         `${API_BASE}category=${filter.category}&year=${filter.year}`,
         { headers: { "Access-Control-Allow-Origin": "*" } }
       );
-      let resContracts = response.data.response;
-      console.log(resContracts, resContracts.contracts);
-      console.log(`cantidade de contratos: ${resContracts.contracts_number}`);
+      // console.log(response);
+
+      // console.log(response);
+      // console.log(`cantidade de contratos: ${resContracts.contracts_number}`);
     } catch (error) {
       console.log(error);
     }
   };
-
-  if (filter.year !== ("Año", "") && filter.category !== ("Categoria", "")) {
+  if (filter.year !== "Año" && filter.category !== "Categoria") {
     getContracts();
-    // console.log("fn ejecutada");
   }
+
   const categorys = [
     "Categoria",
     "Seguridad",
