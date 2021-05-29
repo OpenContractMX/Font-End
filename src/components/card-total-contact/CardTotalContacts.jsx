@@ -4,7 +4,7 @@ import "./CardTotalContracts.scss";
 
 export const CardTotalContacts = ({ filter, contracts }) => {
   // console.log(contracts);
-  console.log(filter);
+  // console.log(filter);
 
   return (
     <div className="card-total-contract">

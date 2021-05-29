@@ -5,7 +5,7 @@ import queryString from "query-string";
 import axios from "axios";
 
 export const SectionContracts = ({ filterTime, query }) => {
-  console.log(">>>", filterTime, query);
+  // console.log(">>>", filterTime, query);
   const [contracts, setContracts] = useState([]);
   const { search } = useLocation();
   const { category, year } = queryString.parse(search);
@@ -17,7 +17,7 @@ export const SectionContracts = ({ filterTime, query }) => {
   const getContractsMonth = async () => {
     try {
       let response = await axios.get(
-        `${API_BASE}category=${category}&year=${year}&month=${filterTime.filterTime.month}`,
+        `${API_BASE}category=${category}&year=${year}&month=${filterTime.month}`,
         { headers: { "Access-Control-Allow-Origin": "*" } }
       );
       setContracts(response.data.response.contracts);
@@ -37,7 +37,7 @@ export const SectionContracts = ({ filterTime, query }) => {
   const getContractsQuarter = async () => {
     try {
       let response = await axios.get(
-        `${API_BASE}category=${category}&year=${year}&trimester=${filterTime.filterTime.quarter}`,
+        `${API_BASE}category=${category}&year=${year}&trimester=${filterTime.quarter}`,
         { headers: { "Access-Control-Allow-Origin": "*" } }
       );
       setContracts(response.data.response.contracts);
@@ -53,13 +53,13 @@ export const SectionContracts = ({ filterTime, query }) => {
   useEffect(() => {
     if (filterTime.month !== "Mes" && filterTime.month !== "") {
       getContractsMonth();
-      console.log(filterTime);
+      // console.log(filterTime);
     }
     if (filterTime.quarter !== ("Trimestre", "")) {
       getContractsQuarter();
       // console.log("fn ejecutada");
     }
-    console.log(contracts);
+    // console.log(contracts);
   }, [filterTime]);
   return (
     <section className="container-contracts">

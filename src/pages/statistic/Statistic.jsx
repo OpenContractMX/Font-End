@@ -12,6 +12,7 @@ import "./Statistic.scss";
 
 export const Statistic = () => {
   const [filter, setFilter] = useState({ category: "", year: "" });
+  console.log(filter);
 
   return (
     <main className="container-statistic">
