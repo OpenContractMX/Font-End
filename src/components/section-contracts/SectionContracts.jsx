@@ -1,64 +1,91 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./SectionContracts.scss";
-// import { useLocation } from "react-router-dom";
-// import queryString from "query-string";
+import { useLocation } from "react-router-dom";
+import queryString from "query-string";
+import axios from "axios";
 
-export const SectionContracts = () => {
-  // const { search } = useLocation();
-  // const { category, year } = queryString.parse(search);
-  // // console.log(category, year);
+export const SectionContracts = (filterTime) => {
+  // console.log(filterTime);
+  const [contracts, setContracts] = useState([]);
+  const { search } = useLocation();
+  const { category, year } = queryString.parse(search);
+  // console.log(category, year);
   //fetch
+
+  const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
+
+  const getContractsMonth = async () => {
+    try {
+      let response = await axios.get(
+        `${API_BASE}category=${category}&year=${year}&month=${filterTime.filterTime.month}`,
+        { headers: { "Access-Control-Allow-Origin": "*" } }
+      );
+      setContracts(response.data.response.contracts);
+      // console.log(response);
+
+      // console.log(contractsMonth);
+
+      // console.log(resContracts, resContracts.contracts);
+      // console.log(`cantidade de contratos: ${resContracts.contracts_number}`);
+    } catch (error) {
+      // console.log(error);
+    }
+  };
+  // console.log(resContracts);
+  // getContractsMonth();
+
+  const getContractsQuarter = async () => {
+    try {
+      let response = await axios.get(
+        `${API_BASE}category=${category}&year=${year}&trimester=${filterTime.filterTime.quarter}`,
+        { headers: { "Access-Control-Allow-Origin": "*" } }
+      );
+
+      let contractsQuarter = response.data.response.contracts;
+      console.log(contractsQuarter);
+      // console.log(`cantidade de contratos: ${resContracts.contracts_number}`);
+    } catch (error) {
+      // console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    if (filterTime.month !== "Mes" && filterTime.month !== "") {
+      getContractsMonth();
+      console.log(filterTime);
+    }
+    if (filterTime.quarter !== ("Trimestre", "")) {
+      getContractsQuarter();
+      // console.log("fn ejecutada");
+    }
+    console.log(contracts);
+  }, [filterTime]);
   return (
     <section className="container-contracts">
       <h2 className="container-contracts--title">Contratos</h2>
-      <div className="container-contracts__contract-wrap">
-        <div className="container-contracts__contract-wrap--card-contract">
-          <h3>Dependencia:</h3>
-          <p>Secretaría de Comunicaciones y Transportes</p>
-          <h3>Contrato:</h3>
-          <p>El servicio de Comunicación Unificada San Fandila</p>
-          <h3>Valor:</h3>
-          <p>
-            20000 <span>MXN</span>
-          </p>
-          <h3>Fecha:</h3>
-          <p>2016-12-19T12:44:56</p>
+      {contracts.length === 0 ? (
+        <p>no hay contratos</p>
+      ) : (
+        <div className="container-contracts__contract-wrap">
+          {contracts.map((contract, index) => (
+            <div
+              className="container-contracts__contract-wrap--card-contract"
+              key={index}
+            >
+              <h3>Dependencia:</h3>
+              <p>{contract.buyer_name}</p>
+              <h3>Contrato:</h3>
+              <p>{contract.title}</p>
+              <h3>Valor:</h3>
+              <p>
+                {contract.amount} <span>MXN</span>
+              </p>
+              <h3>Fecha:</h3>
+              <p>{contract.date}</p>
+            </div>
+          ))}
         </div>
-        <div className="container-contracts__contract-wrap--card-contract">
-          <h3>Dependencia:</h3>
-          <p>Secretaría de Comunicaciones y Transportes</p>
-          <h3>Contrato:</h3>
-          <p>
-            El servicio de Comunicación Unificada San Fandila – México, y
-            Servicios de bienes telemáticos, Mantenimiento preventivo y
-            correctivo de hardware, PC’s y periféricos, firewall, switch y
-            Access point.
-          </p>
-          <h3>Valor:</h3>
-          <p>
-            20000 <span>MXN</span>
-          </p>
-          <h3>Fecha:</h3>
-          <p>2016-12-19T12:44:56</p>
-        </div>
-        <div className="container-contracts__contract-wrap--card-contract">
-          <h3>Dependencia:</h3>
-          <p>Secretaría de Comunicaciones y Transportes</p>
-          <h3>Contrato:</h3>
-          <p>
-            El servicio de Comunicación Unificada San Fandila – México, y
-            Servicios de bienes telemáticos, Mantenimiento preventivo y
-            correctivo de hardware, PC’s y periféricos, firewall, switch y
-            Access point.
-          </p>
-          <h3>Valor:</h3>
-          <p>
-            20000 <span>MXN</span>
-          </p>
-          <h3>Fecha:</h3>
-          <p>2016-12-19T12:44:56</p>
-        </div>
-      </div>
+      )}
     </section>
   );
 };

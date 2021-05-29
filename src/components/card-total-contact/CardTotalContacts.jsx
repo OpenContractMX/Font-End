@@ -2,19 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./CardTotalContracts.scss";
 
-export const CardTotalContacts = ({ filter }) => {
-  // console.log(filter);
+export const CardTotalContacts = ({ filter, contracts }) => {
+  // console.log(contracts);
+  console.log(filter);
 
   return (
     <div className="card-total-contract">
       <h2 className="card-total-contract--all">
         Total Contratos:
-        <span>53</span>
+        {/* <span>{contracts.resContracts.contracts_number}</span> */}
       </h2>
       <h2 className="card-total-contract__investment">
         Inversión:
         <span className="card-total-contract__investment--amount">
-          200
+          {/* {contracts.resContracts.inversion} */}
           <span>MX</span>
         </span>
       </h2>

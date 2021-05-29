@@ -26,10 +26,11 @@
     margin-top: 12px;
     display: flex;
     flex-direction: column;
+    text-align: center;
 
     &--amount {
       text-align: center;
-
+      @include ParagraphsMobile;
       & span {
         margin-left: 8px;
       }
