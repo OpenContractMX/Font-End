@@ -1,0 +1,26 @@
+@import "../../assets/scss/reset";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.card-average-contract {
+  width: 200px;
+  height: 100px;
+  margin: 40px 0;
+  box-shadow: $shadow-light;
+  background-color: $color-light-primary;
+  border-radius: 16px;
+
+  &--tittle {
+    @include subTittleMobile;
+    color: $color-dark-primary;
+    text-align: center;
+    margin: 12px 12px 8px 12px;
+  }
+
+  &--quantity,
+  &--quantity span {
+    @include ParagraphsMobile;
+    color: $color-dark-primary;
+    text-align: center;
+  }
+}

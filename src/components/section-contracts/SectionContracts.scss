@@ -1,0 +1,41 @@
+@import "../../assets/scss/reset";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.container-contracts {
+  width: 100%;
+
+  &--title {
+    color: $color-dark-primary;
+    margin-top: 28px;
+    text-align: center;
+    @include tittleMobile;
+  }
+
+  &__contract-wrap {
+    width: 100%;
+    margin-top: 28px;
+
+    &--card-contract {
+      width: 100%;
+      height: auto;
+      background-color: $color-light-primary;
+      border-radius: 24px;
+      padding: 12px;
+      margin-bottom: 16px;
+
+      & h3,
+      & p {
+        color: $color-dark-primary;
+        @include subTittleMobile;
+        margin-top: 12px;
+        padding: 0 12px;
+      }
+
+      & p {
+        @include ParagraphsMobile;
+        margin-top: 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../assets/scss/reset";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.nav-contracts {
+  width: 100%;
+  // display: flex;
+  // justify-content: space-between;
+  margin: 24px 0 24px 0;
+
+  &--btn-volver,
+  &--ver-todos {
+    width: 108px;
+    height: 36px;
+    border: $color-dark-primary;
+    border-radius: 8px;
+    cursor: pointer;
+    color: $color-light-primary;
+    background-color: $color-dark-primary;
+    @include subTittleMobile;
+
+    & i {
+      margin-right: 8px;
+    }
+  }
+  &--btn-volver {
+    position: fixed;
+  }
+  &--ver-todos {
+    background-color: $color-light-primary;
+    color: $color-dark-primary;
+  }
+}

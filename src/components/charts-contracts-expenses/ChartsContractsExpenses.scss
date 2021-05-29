@@ -1,0 +1,23 @@
+@import "../../assets/scss/reset";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.container__contract-expense {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--title {
+    @include tittleMobile;
+    color: $color-dark-primary;
+    text-align: center;
+    margin-top: 32px;
+  }
+
+  &--chart {
+    width: 280px;
+    height: 140px;
+    background-color: $color-light-primary;
+    margin-top: 24px;
+  }
+}

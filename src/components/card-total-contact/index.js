@@ -1,0 +1,1 @@
+export { CardTotalContacts } from "./CardTotalContacts";
