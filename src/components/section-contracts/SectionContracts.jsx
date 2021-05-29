@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import queryString from "query-string";
 import axios from "axios";
 
-export const SectionContracts = ({ filterTime, query }) => {
+export const SectionContracts = ({ filterTime }) => {
   // console.log(">>>", filterTime, query);
   const [contracts, setContracts] = useState([]);
   const { search } = useLocation();

@@ -26,6 +26,7 @@ export const FilterPerTime = ({ filterTime, setFilterTime }) => {
         <select
           className="filter-time__filter--month"
           onChange={handleOnChangeMonth}
+          value={filterTime.month}
         >
           {months.map((month, index) => (
             <option key={index} value={month} defaultValue="pepito">
@@ -36,6 +37,7 @@ export const FilterPerTime = ({ filterTime, setFilterTime }) => {
         <select
           className="filter-time__filter--quarter"
           onChange={handleOnChangeQuarter}
+          value={filterTime.quarter}
         >
           {quarters.map((quarter, index) => (
             <option key={index} value={quarter}>

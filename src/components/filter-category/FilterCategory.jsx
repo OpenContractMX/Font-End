@@ -1,6 +1,6 @@
 import React from "react";
 import "./FilterCategory.scss";
-import axios from "axios";
+// import axios from "axios";
 
 export const FilterCategory = ({ filter, setFilter }) => {
   const handleOnChangeCategory = (e) => {
@@ -15,25 +15,25 @@ export const FilterCategory = ({ filter, setFilter }) => {
     // getContracts();
   };
 
-  const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
+  // const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
 
-  const getContracts = async () => {
-    try {
-      let response = await axios.get(
-        `${API_BASE}category=${filter.category}&year=${filter.year}`,
-        { headers: { "Access-Control-Allow-Origin": "*" } }
-      );
-      // console.log(response);
+  // const getContracts = async () => {
+  //   try {
+  //     let response = await axios.get(
+  //       `${API_BASE}category=${filter.category}&year=${filter.year}`,
+  //       { headers: { "Access-Control-Allow-Origin": "*" } }
+  //     );
+  //     // console.log(response);
 
-      // console.log(response);
-      // console.log(`cantidade de contratos: ${resContracts.contracts_number}`);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  if (filter.year !== "Año" && filter.category !== "Categoria") {
-    getContracts();
-  }
+  //     // console.log(response);
+  //     // console.log(`cantidade de contratos: ${resContracts.contracts_number}`);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+  // if (filter.year !== "Año" && filter.category !== "Categoria") {
+  //   getContracts();
+  // }
 
   const categorys = [
     "Categoria",
