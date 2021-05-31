@@ -1,0 +1,20 @@
+@import "../../assets/scss/reset";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.about-us {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  &__title {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: $sizeSubtitleMobile;
+    text-align: center;
+    & h2 {
+      @include tittleMobile;
+      font-weight: 500;
+    }
+  }
+}

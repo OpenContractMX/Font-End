@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.scss";
+import { TypeOfContract } from "../../components/type-of-contract";
 import filtrarComponentImg from "../../assets/img/filtrar.jpg";
 import datosContratosComponentImg from "../../assets/img/cardDatosContratos.png";
 import topDiezComponentImg from "../../assets/img/top10.jpg";
@@ -13,76 +14,85 @@ export const Home = () => {
     <main className="home">
       <h1 className="home__title">OpenContractMX</h1>
       <h2 className="home__subtitle">
-        Bienvenido, en esta plataforma podrás encontrar información y estadísticas de interés referente a Contratos Federales.
+        Bienvenido, en esta plataforma podrás encontrar información y
+        estadísticas de interés referente a Contratos Federales.
       </h2>
       <p className="home__paragraph">
-        Puedes filtrar por dependencias y año.
+        1. Puedes filtrar por dependencias y año.
       </p>
       <div className="home__container-example">
         <figure className="home__container-example--img">
-        <img src={filtrarComponentImg} alt="Imagen ilustrativa paso 1" />
+          <img src={filtrarComponentImg} alt="Imagen ilustrativa paso 1" />
         </figure>
       </div>
       <p className="home__paragraph">
-        Observar un total de contratos e inversión.
+        2. Observar un total de contratos e inversión.
       </p>
       <div className="home__container-example">
         <figure className="home__container-example--img">
-        <img src={datosContratosComponentImg} alt="Imagen ilustrativa paso 1" />
+          <img
+            src={datosContratosComponentImg}
+            alt="Imagen ilustrativa paso 2"
+          />
         </figure>
       </div>
       <p className="home__paragraph">
-        Ver todos los contratos de manera detallada por mes o por trimestre.
+        3. Ver todos los contratos de manera detallada por mes o por trimestre.
       </p>
       <div className="home__container-example">
         <figure className="home__container-example--img">
-        <img src={verTodosComponentImg} alt="Imagen ilustrativa paso 1" />
+          <img src={verTodosComponentImg} alt="Imagen ilustrativa paso 3" />
         </figure>
       </div>
       <p className="home__paragraph">
-        Puedes ver el Top 10 de contratos por gastos.
+        4. Puedes ver el Top 10 de contratos por gastos.
       </p>
       <div className="home__container-example">
         <figure className="home__container-example--img">
-        <img src={topDiezComponentImg} alt="Imagen ilustrativa paso 1" />
+          <img src={topDiezComponentImg} alt="Imagen ilustrativa paso 4" />
         </figure>
       </div>
       <p className="home__paragraph">
-        Observar el número de contratos por mes.
+        5. Observar el número de contratos por mes.
       </p>
       <div className="home__container-example">
         <figure className="home__container-example--img">
-        <img src={contXmesComponentImg} alt="Imagen ilustrativa paso 1" />
+          <img src={contXmesComponentImg} alt="Imagen ilustrativa paso 5" />
+        </figure>
+      </div>
+      <p className="home__paragraph">6. Detallar los tipos de contratos.</p>
+      <div className="home__container-example">
+        <figure className="home__container-example--img">
+          <img
+            src={tipoContratosComponentImg}
+            alt="Imagen ilustrativa paso 6"
+          />
         </figure>
       </div>
       <p className="home__paragraph">
-        Detallar los tipos de contratos.
+        7. Y un tiempo de ejecución promedio para estos contratos de la
+        dependencia detallada.
       </p>
       <div className="home__container-example">
         <figure className="home__container-example--img">
-        <img src={tipoContratosComponentImg} alt="Imagen ilustrativa paso 1" />
+          <img
+            src={ejecucionPromedioComponentImg}
+            alt="Imagen ilustrativa paso 7"
+          />
         </figure>
       </div>
       <p className="home__paragraph">
-        Y un tiempo de ejecución promedio para estos contratos de la dependencia detallada. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit.
       </p>
-      <div className="home__container-example">
-        <figure className="home__container-example--img">
-        <img src={ejecucionPromedioComponentImg} alt="Imagen ilustrativa paso 1" />
-        </figure>
-      </div>
-      <p className="home__paragraph">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-      </p>
+      <TypeOfContract />
+
       <div className="home__container-chart">
         <figure className="home__container-chart--logo">
           <img src={chartHomeImg} alt="Imagen del Home" />
         </figure>
       </div>
-
-      
     </main>
   );
 };

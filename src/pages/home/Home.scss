@@ -10,10 +10,10 @@
     margin-top: $sizeLogoMobile;
   }
   &__subtitle {
-    @include subTittleMobile;
+    @include ParagraphsMobile;
     color: $color-dark-primary;
     text-align: center;
-    margin-top: $sizeLogoMobile;
+    margin: $sizeLogoMobile;
   }
   &__paragraph {
     @include ParagraphsMobile;
