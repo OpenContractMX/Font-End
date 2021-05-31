@@ -10,7 +10,6 @@ export const SectionContracts = ({ filterTime }) => {
   const { search } = useLocation();
   const { category, year } = queryString.parse(search);
   // console.log(category, year);
-  //fetch
 
   const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
 
@@ -21,18 +20,10 @@ export const SectionContracts = ({ filterTime }) => {
         { headers: { "Access-Control-Allow-Origin": "*" } }
       );
       setContracts(response.data.response.contracts);
-      // console.log(response);
-
-      // console.log(contractsMonth);
-
-      // console.log(resContracts, resContracts.contracts);
-      // console.log(`cantidade de contratos: ${resContracts.contracts_number}`);
     } catch (error) {
-      // console.log(error);
+      console.log(error);
     }
   };
-  // console.log(resContracts);
-  // getContractsMonth();
 
   const getContractsQuarter = async () => {
     try {
@@ -41,25 +32,18 @@ export const SectionContracts = ({ filterTime }) => {
         { headers: { "Access-Control-Allow-Origin": "*" } }
       );
       setContracts(response.data.response.contracts);
-
-      // let contractsQuarter = response.data.response.contracts;
-      // console.log(contractsQuarter);
-      // console.log(`cantidade de contratos: ${resContracts.contracts_number}`);
     } catch (error) {
-      // console.log(error);
+      console.log(error);
     }
   };
 
   useEffect(() => {
     if (filterTime.month !== "Mes") {
       getContractsMonth();
-      // console.log(filterTime);
     }
     if (filterTime.quarter !== "Trimestre") {
       getContractsQuarter();
-      // console.log("fn ejecutada");
     }
-    // console.log(contracts);
   }, [filterTime]);
   return (
     <section className="container-contracts">

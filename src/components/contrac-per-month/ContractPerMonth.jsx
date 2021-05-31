@@ -11,7 +11,7 @@ import {
 } from "recharts";
 
 export const ContractPerMonth = ({ contractsChars }) => {
-  console.log("=>", contractsChars.months);
+  // console.log("=>", contractsChars.months);
 
   const data = [
     {
@@ -66,7 +66,6 @@ export const ContractPerMonth = ({ contractsChars }) => {
   return (
     <section className="container__contract-month">
       <h2 className="container__contract-month--title">Contratos por Mes:</h2>
-      {/* <div className="container__contract-month--chart">chart</div> */}
       <LineChart
         width={600}
         height={240}

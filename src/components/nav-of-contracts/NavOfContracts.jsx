@@ -12,10 +12,6 @@ export const NavOfContracts = () => {
           Volver
         </button>
       </Link>
-
-      {/* <button type="button" className="nav-contracts--ver-todos">
-        <span>Ver todos</span>
-      </button> */}
     </nav>
   );
 };

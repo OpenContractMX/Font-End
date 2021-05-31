@@ -12,7 +12,7 @@ import {
 
 export const ChartsContractsExpenses = ({ contractsChars }) => {
   let contracts = contractsChars.top_ten;
-  console.log(">>", contracts);
+  // console.log(">>", contracts);
 
   const data = [
     {
@@ -61,7 +61,6 @@ export const ChartsContractsExpenses = ({ contractsChars }) => {
       <h2 className="container__contract-expense--title">
         Top 10 contratos en gastos:
       </h2>
-      {/* <div className="container__contract-expense--chart">chart</div> */}
       <BarChart
         width={600}
         height={240}
@@ -73,12 +72,6 @@ export const ChartsContractsExpenses = ({ contractsChars }) => {
           bottom: 10,
         }}
       >
-        {/* <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend /> */}
-
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />

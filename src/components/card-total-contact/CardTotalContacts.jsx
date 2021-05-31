@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import "./CardTotalContracts.scss";
 
 export const CardTotalContacts = ({ filter, contractsChars }) => {
-  // console.log(">>>", contractsChars);
-  // console.log(filter);
-
   return (
     <div className="card-total-contract">
       <h2 className="card-total-contract--all">

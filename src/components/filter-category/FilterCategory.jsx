@@ -1,53 +1,28 @@
 import React from "react";
 import "./FilterCategory.scss";
-// import axios from "axios";
 
 export const FilterCategory = ({ filter, setFilter }) => {
   const handleOnChangeCategory = (e) => {
-    // console.log(e.target.value);
     setFilter({ ...filter, category: e.target.value });
-    // getContracts();
   };
 
   const handleOnChangeYear = (e) => {
-    // console.log(e.target.value);
     setFilter({ ...filter, year: e.target.value });
-    // getContracts();
   };
-
-  // const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
-
-  // const getContracts = async () => {
-  //   try {
-  //     let response = await axios.get(
-  //       `${API_BASE}category=${filter.category}&year=${filter.year}`,
-  //       { headers: { "Access-Control-Allow-Origin": "*" } }
-  //     );
-  //     // console.log(response);
-
-  //     // console.log(response);
-  //     // console.log(`cantidade de contratos: ${resContracts.contracts_number}`);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-  // if (filter.year !== "Año" && filter.category !== "Categoria") {
-  //   getContracts();
-  // }
 
   const categorys = [
     "Categoria",
-    "Seguridad",
-    "Salud",
-    "Energia",
-    "Economia",
-    "Gobernacion",
-    "Medio-Ambiente",
-    "Educacion",
+    "seguridad",
+    "salud",
+    "energia",
+    "economia",
+    "gobernacion",
+    "medio_ambiente",
+    "educacion",
     "comunicacion_transporte",
-    "Social",
-    "Investigacion",
-    "Trabajo",
+    "social",
+    "investigacion",
+    "trabajo",
   ];
 
   const years = ["Año", 2015, 2016, 2017, 2018];
@@ -59,6 +34,7 @@ export const FilterCategory = ({ filter, setFilter }) => {
         <select
           className="filter-category__filter--category"
           onChange={handleOnChangeCategory}
+          value={filter.category}
         >
           {categorys.map((category, index) => (
             <option key={index} value={category}>
@@ -69,6 +45,7 @@ export const FilterCategory = ({ filter, setFilter }) => {
         <select
           className="filter-category__filter--years"
           onChange={handleOnChangeYear}
+          value={filter.year}
         >
           {years.map((year, index) => (
             <option key={index} value={year}>
