@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import axios from "axios";
 
 import { FilterCategory } from "../../components/filter-category";
@@ -11,10 +11,10 @@ import "./Statistic.scss";
 
 export const Statistic = () => {
   const [filter, setFilter] = useState({ category: "Categoria", year: "Año" });
-  console.log(">>>", filter);
+  console.log("estado>>>", filter);
 
   const [contractsChars, setContractsChars] = useState({
-    contracts_number: "sin datos",
+    contracts_number: "0",
     inversion: 0,
     execution_mean: 0,
     months: {
@@ -32,6 +32,7 @@ export const Statistic = () => {
       12: 0,
     },
   });
+  console.log(">>>", contractsChars.inversion);
 
   const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
 
@@ -42,6 +43,7 @@ export const Statistic = () => {
         { headers: { "Access-Control-Allow-Origin": "*" } }
       );
       setContractsChars(response.data.response);
+      // console.log("response>>>", response.data.response);
     } catch (error) {
       console.log(error);
     }
@@ -56,6 +58,13 @@ export const Statistic = () => {
   return (
     <main className="container-statistic">
       <FilterCategory setFilter={setFilter} filter={filter} />
+      {filter.category !== "Categoria" &&
+      filter.year !== "Año" &&
+      contractsChars.inversion === 0 ? (
+        <p>Para la cateforia y el año no se encontraros datos </p>
+      ) : (
+        <Fragment></Fragment>
+      )}
       <CardTotalContacts filter={filter} contractsChars={contractsChars} />
       <ChartsContractsExpenses contractsChars={contractsChars} />
       <ContractPerMonth contractsChars={contractsChars} />

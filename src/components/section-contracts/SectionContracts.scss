@@ -2,7 +2,7 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/mixins";
 
-.container-contracts {
+.section-contracts {
   width: 100%;
 
   &--title {
@@ -11,18 +11,35 @@
     text-align: center;
     @include tittleMobile;
   }
+  &--total {
+    margin-top: 24px;
+    color: $color-dark-primary;
+    @include subTittleMobile;
+  }
+  &--no-contracts,
+  &--filter {
+    margin-top: 24px;
+    color: $color-dark-primary;
+    @include subTittleMobile;
+  }
 
   &__contract-wrap {
     width: 100%;
     margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
 
     &--card-contract {
-      width: 100%;
+      width: 300px;
+      min-width: 280px;
+      max-width: 450px;
       height: auto;
       background-color: $color-light-primary;
       border-radius: 24px;
       padding: 12px;
-      margin-bottom: 16px;
+      // margin-bottom: 16px;
 
       & h3,
       & p {

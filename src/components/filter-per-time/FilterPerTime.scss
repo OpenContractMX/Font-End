@@ -3,7 +3,9 @@
 @import "../../assets/scss/mixins";
 
 .filter-time {
-  width: 100%;
+  width: 60%;
+  max-width: 600px;
+  min-width: 480px;
 
   &--title {
     @include tittleMobile;
@@ -14,8 +16,6 @@
     width: 100%;
     height: 32px;
     margin-top: 12px;
-    display: flex;
-    justify-content: space-evenly;
 
     &--month,
     &--quarter {
@@ -33,6 +33,18 @@
     &--month {
       width: 84px;
       padding: 4px 10px;
+      margin-right: 24px;
+    }
+    & label {
+      color: $color-dark-primary;
+      @include subTittleMobile;
+      margin-right: 16px;
+    }
+
+    & span {
+      color: $color-dark-primary;
+      @include subTittleMobile;
+      margin-right: 24px;
     }
   }
 }

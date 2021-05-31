@@ -21,8 +21,9 @@ export const FilterPerTime = ({ filterTime, setFilterTime }) => {
 
   return (
     <section className="filter-time">
-      <h2 className="filter-time--title">Filtar:</h2>
+      <h2 className="filter-time--title">Filtar por:</h2>
       <form className="filter-time__filter">
+        <label for="">Mes</label>
         <select
           className="filter-time__filter--month"
           onChange={handleOnChangeMonth}
@@ -34,6 +35,9 @@ export const FilterPerTime = ({ filterTime, setFilterTime }) => {
             </option>
           ))}
         </select>
+        <span>Ó</span>
+        <label for="">Trimestre</label>
+
         <select
           className="filter-time__filter--quarter"
           onChange={handleOnChangeQuarter}
