@@ -6,6 +6,8 @@ export const CardTotalContacts = ({ filter, contractsChars }) => {
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
+  const URL_API = "https://opencontractsmx.herokuapp.com/api/download?";
+
   return (
     <div className="card-total-contract">
       <h2 className="card-total-contract--all">
@@ -24,6 +26,15 @@ export const CardTotalContacts = ({ filter, contractsChars }) => {
           Ver todos
         </button>
       </Link>
+      <a
+        href={`${URL_API}category=${filter.category}&year=${filter.year}`}
+        download
+      >
+        <button type="button" className="btn-download">
+          <i className="fas fa-download icon-download"></i>
+          <span>Descargar Excel</span>
+        </button>
+      </a>
     </div>
   );
 };

@@ -4,7 +4,7 @@
 
 .card-total-contract {
   width: 240px;
-  height: 190px;
+  height: 240px;
   background-color: $color-light-primary;
   border-radius: 12px;
   margin-top: 28px;
@@ -46,14 +46,25 @@
   & a {
     transform: translateY(18px);
   }
-  .btn-ver-todos {
-    width: 104px;
+  & .btn-ver-todos,
+  & .btn-download {
+    width: 200px;
     height: 28px;
+    display: block;
     border: $color-dark-primary;
     border-radius: 8px;
     cursor: pointer;
     color: $color-light-primary;
     background-color: $color-dark-primary;
     @include ParagraphsMobile;
+
+    & i {
+      margin-right: 8px;
+    }
+  }
+
+  & .btn-download {
+    margin-top: 32px;
+    background-color: $color-primary;
   }
 }

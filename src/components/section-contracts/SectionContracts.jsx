@@ -5,7 +5,6 @@ import queryString from "query-string";
 import axios from "axios";
 
 export const SectionContracts = ({ filterTime }) => {
-  // console.log(">>>", filterTime, query);
   const [contracts, setContracts] = useState([]);
   const [totalContracts, setTotalContracts] = useState([
     {
@@ -15,7 +14,6 @@ export const SectionContracts = ({ filterTime }) => {
   ]);
   const { search } = useLocation();
   const { category, year } = queryString.parse(search);
-  // console.log(category, year);
 
   const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
 
