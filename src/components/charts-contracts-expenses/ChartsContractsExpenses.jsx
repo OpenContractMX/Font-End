@@ -12,7 +12,6 @@ import {
 
 export const ChartsContractsExpenses = ({ contractsChars }) => {
   let contracts = contractsChars.top_ten;
-  console.log(">>", contracts);
 
   const [topContracts, setTopContracts] = useState([
     {

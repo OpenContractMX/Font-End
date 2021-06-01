@@ -73,17 +73,45 @@ export const Statistic = ({ filter, setFilter }) => {
       filter.year !== "Año" &&
       contractsChars.inversion === 0 ? (
         <p className="container-statistic--no-contracts">
-          Para la cateforia y el año no se encontraros datos{" "}
+          Para la categoria y el año no se encontraros datos{" "}
+        </p>
+      ) : filter.category === "Categoria" && filter.year === "Año" ? (
+        <p className="container-statistic--no-filter">
+          Filtra por categoria y año para optener datos{" "}
         </p>
       ) : (
         <Fragment></Fragment>
       )}
 
-      <CardTotalContacts filter={filter} contractsChars={contractsChars} />
-
+      {contractsChars.inversion !== 0 ? (
+        <>
+          <CardTotalContacts filter={filter} contractsChars={contractsChars} />
+          <ChartsContractsExpenses contractsChars={contractsChars} />
+          <ContractPerMonth contractsChars={contractsChars} />
+          <AverageExecutionContract contractsChars={contractsChars} />
+        </>
+      ) : (
+        <></>
+      )}
+      {/* <CardTotalContacts filter={filter} contractsChars={contractsChars} />
+      {contractsChars.inversion !== 0 ? (
+        <ChartsContractsExpenses contractsChars={contractsChars} />
+      ) : (
+        <></>
+      )}
+      {contractsChars.inversion !== 0 ? (
+        <ContractPerMonth contractsChars={contractsChars} />
+      ) : (
+        <></>
+      )}
       <ChartsContractsExpenses contractsChars={contractsChars} />
       <ContractPerMonth contractsChars={contractsChars} />
       <AverageExecutionContract contractsChars={contractsChars} />
+      {contractsChars.inversion !== 0 ? (
+        <AverageExecutionContract contractsChars={contractsChars} />
+      ) : (
+        <></>
+      )} */}
     </main>
   );
 };
