@@ -45,6 +45,15 @@ export const SectionContracts = ({ filterTime }) => {
     }
   };
 
+  const tranformToCapitalize = (title) => {
+    const titleToLowercase = title.toLowerCase();
+    return titleToLowercase.charAt(0).toUpperCase() + titleToLowercase.slice(1);
+  };
+
+  const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   useEffect(() => {
     if (filterTime.month !== "Mes") {
       getContractsMonth();
@@ -78,42 +87,17 @@ export const SectionContracts = ({ filterTime }) => {
               <h3>Dependencia:</h3>
               <p>{contract.buyer_name}</p>
               <h3>Contrato:</h3>
-              <p>{contract.title}</p>
+              <p>{tranformToCapitalize(contract.title)}</p>
               <h3>Valor:</h3>
               <p>
-                {contract.amount} <span>MXN</span>
+                {numberWithCommas(contract.amount)} <span>MXN</span>
               </p>
               <h3>Fecha:</h3>
-              <p>{contract.date}</p>
+              <p>{new Date(contract.date).toDateString()}</p>
             </div>
           ))}
         </div>
       )}
-      {/* {contracts.length === 0 ? (
-        <p className="section-contracts--no-contracts">
-          No hay contratos, para el filtro actualemte seleccionado.
-        </p>
-      ) : (
-        <div className="section-contracts__contract-wrap">
-          {contracts.map((contract, index) => (
-            <div
-              className="section-contracts__contract-wrap--card-contract"
-              key={index}
-            >
-              <h3>Dependencia:</h3>
-              <p>{contract.buyer_name}</p>
-              <h3>Contrato:</h3>
-              <p>{contract.title}</p>
-              <h3>Valor:</h3>
-              <p>
-                {contract.amount} <span>MXN</span>
-              </p>
-              <h3>Fecha:</h3>
-              <p>{contract.date}</p>
-            </div>
-          ))}
-        </div>
-      )} */}
     </section>
   );
 };

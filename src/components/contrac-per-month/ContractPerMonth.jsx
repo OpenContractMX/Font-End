@@ -78,17 +78,28 @@ export const ContractPerMonth = ({ contractsChars }) => {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
+        <CartesianGrid horizontal="true" vertical="" stroke="#243240" />
+        <XAxis dataKey="name" tick={{ fill: "#000" }} />
+        <YAxis tick={{ fill: "#000" }} />
+        <Tooltip
+          contentStyle={{ backgroundColor: "#fff", color: "#000" }}
+          itemStyle={{ color: "#000" }}
+          cursor={false}
+        />
         <Legend />
         <Line
           type="monotone"
-          dataKey="pv"
-          stroke="#8884d8"
-          activeDot={{ r: 8 }}
+          dataKey="contratos"
+          stroke="#fdac41"
+          strokeWidth="3"
+          dot={{ fill: "#2e4355", stroke: "#1a233a", strokeWidth: 2, r: 2 }}
+          activeDot={{
+            fill: "#2e4355",
+            stroke: "#5a8dee",
+            strokeWidth: 2,
+            r: 5,
+          }}
         />
-        <Line type="monotone" dataKey="contratos" stroke="#82ca9d" />
       </LineChart>
     </section>
   );

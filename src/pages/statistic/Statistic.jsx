@@ -16,6 +16,18 @@ export const Statistic = () => {
   const [contractsChars, setContractsChars] = useState({
     contracts_number: "0",
     inversion: 0,
+    top_ten: [
+      {
+        id: 0,
+        month: 0,
+        trimester: 0,
+        title: "vacio",
+        buyer_name: "vacio",
+        date: "0",
+        amount: 0,
+        currency: "",
+      },
+    ],
     execution_mean: 0,
     months: {
       1: 0,
@@ -32,7 +44,6 @@ export const Statistic = () => {
       12: 0,
     },
   });
-  console.log(">>>", contractsChars.inversion);
 
   const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
 
