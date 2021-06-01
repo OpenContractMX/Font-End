@@ -8,4 +8,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &--no-contracts {
+    margin-top: 24px;
+    color: $color-dark-primary;
+    @include ParagraphsMobile;
+  }
 }

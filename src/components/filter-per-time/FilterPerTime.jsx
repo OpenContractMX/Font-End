@@ -17,7 +17,7 @@ export const FilterPerTime = ({ filterTime, setFilterTime }) => {
   };
   const months = ["Mes", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
-  const quarters = ["Trimestre", "Todos", 1.0, 2.0, 3.0, 4.0];
+  const quarters = ["Trimestre", 1.0, 2.0, 3.0, 4.0];
 
   return (
     <section className="filter-time">

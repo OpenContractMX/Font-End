@@ -67,8 +67,8 @@ export const ContractPerMonth = ({ contractsChars }) => {
     <section className="container__contract-month">
       <h2 className="container__contract-month--title">Contratos por Mes:</h2>
       <LineChart
-        width={600}
-        height={240}
+        width={350}
+        height={260}
         data={data}
         margin={{
           top: 5,

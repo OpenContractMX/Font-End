@@ -48,7 +48,7 @@ export const ChartsContractsExpenses = ({ contractsChars }) => {
         Top 10 contratos en gastos:
       </h2>
       <BarChart
-        width={600}
+        width={280}
         height={240}
         data={topContracts}
         margin={{

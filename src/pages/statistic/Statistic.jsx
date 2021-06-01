@@ -9,9 +9,9 @@ import { AverageExecutionContract } from "../../components/average-execution-con
 
 import "./Statistic.scss";
 
-export const Statistic = () => {
-  const [filter, setFilter] = useState({ category: "Categoria", year: "Año" });
-  console.log("estado>>>", filter);
+export const Statistic = ({ filter, setFilter }) => {
+  // const [filter, setFilter] = useState({ category: "Categoria", year: "Año" });
+  // console.log("estado>>>", filter);
 
   const [contractsChars, setContractsChars] = useState({
     contracts_number: "0",
@@ -72,11 +72,15 @@ export const Statistic = () => {
       {filter.category !== "Categoria" &&
       filter.year !== "Año" &&
       contractsChars.inversion === 0 ? (
-        <p>Para la cateforia y el año no se encontraros datos </p>
+        <p className="container-statistic--no-contracts">
+          Para la cateforia y el año no se encontraros datos{" "}
+        </p>
       ) : (
         <Fragment></Fragment>
       )}
+
       <CardTotalContacts filter={filter} contractsChars={contractsChars} />
+
       <ChartsContractsExpenses contractsChars={contractsChars} />
       <ContractPerMonth contractsChars={contractsChars} />
       <AverageExecutionContract contractsChars={contractsChars} />

@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import "./CardTotalContracts.scss";
 
 export const CardTotalContacts = ({ filter, contractsChars }) => {
+  const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
   return (
     <div className="card-total-contract">
       <h2 className="card-total-contract--all">
@@ -12,7 +15,7 @@ export const CardTotalContacts = ({ filter, contractsChars }) => {
       <h2 className="card-total-contract__investment">
         Inversión:
         <span className="card-total-contract__investment--amount">
-          {contractsChars.inversion}
+          {numberWithCommas(contractsChars.inversion)}
           <span>MX</span>
         </span>
       </h2>

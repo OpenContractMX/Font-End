@@ -7,7 +7,7 @@
 
   &--title {
     color: $color-dark-primary;
-    margin-top: 28px;
+    margin-top: 80px;
     text-align: center;
     @include tittleMobile;
   }
@@ -20,7 +20,7 @@
   &--filter {
     margin-top: 24px;
     color: $color-dark-primary;
-    @include subTittleMobile;
+    @include ParagraphsMobile;
   }
 
   &__contract-wrap {

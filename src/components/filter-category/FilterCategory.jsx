@@ -30,7 +30,7 @@ export const FilterCategory = ({ filter, setFilter }) => {
   return (
     <section className="filter-category">
       <h2 className="filter-category--title">Filtar:</h2>
-      <form className="filter-category__filter">
+      <form htmlFor="filter-category" className="filter-category__filter">
         <select
           className="filter-category__filter--category"
           onChange={handleOnChangeCategory}
