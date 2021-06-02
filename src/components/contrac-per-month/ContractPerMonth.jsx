@@ -68,7 +68,7 @@ export const ContractPerMonth = ({ contractsChars }) => {
     <section className="container__contract-month">
       <h2 className="container__contract-month--title">Contratos por Mes:</h2>
       <div className="container__contract-month--chart-wrap">
-        <ResponsiveContainer width="100%" aspect={1.5}>
+        <ResponsiveContainer width="100%" aspect={2}>
           <LineChart
             width={400}
             height={260}

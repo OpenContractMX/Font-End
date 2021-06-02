@@ -7,7 +7,7 @@
   height: 240px;
   background-color: $color-light-primary;
   border-radius: 12px;
-  margin-top: 28px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,6 +78,44 @@
 
       & i {
         margin-right: 8px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .card-total-contract {
+    width: 380px;
+    height: 300px;
+
+    &__investment {
+      &--amount {
+        @include ParagraphsTablet;
+      }
+    }
+
+    &--all,
+    &__investment {
+      @include subTitleTablet;
+    }
+
+    &--all span {
+      @include ParagraphsTablet;
+    }
+
+    &__btn-route {
+      &--ver-todos {
+        width: 240px;
+        height: 40px;
+        @include ParagraphsTablet;
+      }
+    }
+
+    &__btn-download {
+      &--download {
+        width: 240px;
+        height: 40px;
+        @include ParagraphsTablet;
       }
     }
   }

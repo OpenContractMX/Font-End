@@ -12,10 +12,10 @@
     @include tittleMobile;
     color: $color-dark-primary;
     text-align: center;
-    margin-top: 32px;
+    margin: 40px 0;
   }
   &--expenses-wrap {
-    width: 60%;
+    width: 80%;
     // height: 240px;
     // padding-left: 10px;
   }
@@ -32,9 +32,12 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
+    margin: 32px 0;
 
     &--card {
-      width: 280px;
+      width: 60%;
+      min-width: 280px;
+      max-width: 460px;
       height: auto;
       background-color: $color-light-primary;
       border-radius: 24px;
@@ -50,6 +53,31 @@
 
       & p {
         @include ParagraphsMobile;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .container__contract-expense {
+    width: 100%;
+
+    &--title {
+      @include titleTablet;
+    }
+
+    &--wrap {
+      &--card {
+        // width: 348px;
+        & h3 {
+          @include subTitleTablet;
+          & span {
+            @include ParagraphsTablet;
+          }
+        }
+
+        & p {
+          @include ParagraphsTablet;
+        }
       }
     }
   }

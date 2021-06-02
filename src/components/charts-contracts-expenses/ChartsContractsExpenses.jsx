@@ -48,7 +48,7 @@ export const ChartsContractsExpenses = ({ contractsChars }) => {
         Top 10 contratos en gastos:
       </h2>
       <div className="container__contract-expense--expenses-wrap">
-        <ResponsiveContainer width="100%" aspect={1.5}>
+        <ResponsiveContainer width="100%" aspect={2}>
           <BarChart
             className="container__contract-expense--expenses-wrap--chart"
             width={380}

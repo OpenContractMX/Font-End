@@ -14,7 +14,7 @@
 @mixin subTittleMobile {
   font-family: $fontSecondary;
   font-size: $sizeSubtitleMobile;
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 @mixin ParagraphsMobile {
@@ -29,15 +29,15 @@
   font-size: $sizeLogoTablet;
 }
 
-@mixin tittleTablet {
+@mixin titleTablet {
   font-family: $fontTitle;
   font-size: $sizeTitleTablet;
 }
 
-@mixin subTittleTablet {
+@mixin subTitleTablet {
   font-family: $fontSecondary;
   font-size: $sizeSubtitleTablet;
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 @mixin ParagraphsTablet {
@@ -53,15 +53,15 @@
   font-size: $sizeLogoMobile;
 }
 
-@mixin tittleDesktop {
+@mixin titleDesktop {
   font-family: $fontTitle;
   font-size: $sizeTitleDestktop;
 }
 
-@mixin subTittleDesktop {
+@mixin subTitleDesktop {
   font-family: $fontSecondary;
   font-size: $sizeSubtitleDestktop;
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 @mixin ParagraphsDesktop {
