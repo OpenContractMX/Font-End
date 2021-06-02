@@ -21,17 +21,27 @@ export const CardTotalContacts = ({ filter, contractsChars }) => {
           <span>MX</span>
         </span>
       </h2>
-      <Link to={`/contracts?category=${filter.category}&year=${filter.year}`}>
-        <button type="button" className="btn-ver-todos">
+      <Link
+        className="card-total-contract__btn-route"
+        to={`/contracts?category=${filter.category}&year=${filter.year}`}
+      >
+        <button
+          type="button"
+          className="card-total-contract__btn-route--ver-todos"
+        >
           Ver todos
         </button>
       </Link>
       <a
+        className="card-total-contract__btn-download"
         href={`${URL_API}category=${filter.category}&year=${filter.year}`}
         download
       >
-        <button type="button" className="btn-download">
-          <i className="fas fa-download icon-download"></i>
+        <button
+          type="button"
+          className="card-total-contract__btn-download--download"
+        >
+          <i className="fas fa-download card-total-contract__btn-download--icon-download"></i>
           <span>Descargar Excel</span>
         </button>
       </a>

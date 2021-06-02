@@ -93,25 +93,6 @@ export const Statistic = ({ filter, setFilter }) => {
       ) : (
         <></>
       )}
-      {/* <CardTotalContacts filter={filter} contractsChars={contractsChars} />
-      {contractsChars.inversion !== 0 ? (
-        <ChartsContractsExpenses contractsChars={contractsChars} />
-      ) : (
-        <></>
-      )}
-      {contractsChars.inversion !== 0 ? (
-        <ContractPerMonth contractsChars={contractsChars} />
-      ) : (
-        <></>
-      )}
-      <ChartsContractsExpenses contractsChars={contractsChars} />
-      <ContractPerMonth contractsChars={contractsChars} />
-      <AverageExecutionContract contractsChars={contractsChars} />
-      {contractsChars.inversion !== 0 ? (
-        <AverageExecutionContract contractsChars={contractsChars} />
-      ) : (
-        <></>
-      )} */}
     </main>
   );
 };

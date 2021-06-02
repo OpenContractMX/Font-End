@@ -30,30 +30,37 @@ export const FilterCategory = ({ filter, setFilter }) => {
   return (
     <section className="filter-category">
       <h2 className="filter-category--title">Filtar:</h2>
-      <form htmlFor="filter-category" className="filter-category__filter">
-        <select
-          className="filter-category__filter--category"
-          onChange={handleOnChangeCategory}
-          value={filter.category}
-        >
-          {categorys.map((category, index) => (
-            <option key={index} value={category}>
-              {category}
-            </option>
-          ))}
-        </select>
-        <select
-          className="filter-category__filter--years"
-          onChange={handleOnChangeYear}
-          value={filter.year}
-        >
-          {years.map((year, index) => (
-            <option key={index} value={year}>
-              {year}
-            </option>
-          ))}
-        </select>
-      </form>
+      <div className="filter-category__form">
+        <form htmlFor="filter-category" className="filter-category__filter">
+          <label>Categoria:</label>
+          <select
+            className="filter-category__filter--category"
+            onChange={handleOnChangeCategory}
+            value={filter.category}
+          >
+            {categorys.map((category, index) => (
+              <option key={index} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+        </form>
+        <span>Y</span>
+        <form>
+          <label>Año:</label>
+          <select
+            className="filter-category__filter--years"
+            onChange={handleOnChangeYear}
+            value={filter.year}
+          >
+            {years.map((year, index) => (
+              <option key={index} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
+        </form>
+      </div>
     </section>
   );
 };

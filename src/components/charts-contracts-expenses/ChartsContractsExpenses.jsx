@@ -46,24 +46,27 @@ export const ChartsContractsExpenses = ({ contractsChars }) => {
       <h2 className="container__contract-expense--title">
         Top 10 contratos en gastos:
       </h2>
-      <BarChart
-        width={280}
-        height={240}
-        data={topContracts}
-        margin={{
-          top: 10,
-          right: 10,
-          left: 0,
-          bottom: 10,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey="inversion" fill={"#fdac41"} />
-      </BarChart>
+      <div className="container__contract-expense--expenses-wrap">
+        <BarChart
+          className="container__contract-expense--expenses-wrap--chart"
+          width={380}
+          height={240}
+          data={topContracts}
+          margin={{
+            top: 10,
+            right: 10,
+            left: 0,
+            bottom: 10,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="inversion" fill={"#fdac41"} />
+        </BarChart>
+      </div>
       <div className="container__contract-expense--wrap">
         {contracts[0].amount !== 0
           ? contracts.map((contract, index) => (

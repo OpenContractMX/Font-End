@@ -3,7 +3,7 @@
 @import "../../assets/scss/mixins";
 
 .card-total-contract {
-  width: 240px;
+  width: 280px;
   height: 240px;
   background-color: $color-light-primary;
   border-radius: 12px;
@@ -11,9 +11,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   &--all {
-    margin-top: 16px;
     display: flex;
     flex-direction: column;
 
@@ -43,28 +43,42 @@
     color: $color-dark-primary;
   }
 
-  & a {
-    transform: translateY(18px);
-  }
-  & .btn-ver-todos,
-  & .btn-download {
-    width: 200px;
-    height: 28px;
-    display: block;
-    border: $color-dark-primary;
-    border-radius: 8px;
-    cursor: pointer;
-    color: $color-light-primary;
-    background-color: $color-dark-primary;
-    @include ParagraphsMobile;
-
-    & i {
-      margin-right: 8px;
+  &__btn-route {
+    margin-top: 12px;
+    text-decoration: none;
+    &--ver-todos {
+      width: 200px;
+      height: 28px;
+      display: block;
+      border: $color-dark-primary;
+      border-radius: 8px;
+      cursor: pointer;
+      color: $color-light-primary;
+      background-color: $color-dark-primary;
+      text-decoration: none;
+      @include ParagraphsMobile;
     }
   }
 
-  & .btn-download {
-    margin-top: 32px;
-    background-color: $color-primary;
+  &__btn-download {
+    text-decoration: none;
+    margin-top: 12px;
+
+    &--download {
+      width: 200px;
+      height: 28px;
+      display: block;
+      border: $color-dark-primary;
+      border-radius: 8px;
+      background-color: $color-primary;
+      cursor: pointer;
+      color: $color-light-primary;
+      text-decoration: none;
+      @include ParagraphsMobile;
+
+      & i {
+        margin-right: 8px;
+      }
+    }
   }
 }
