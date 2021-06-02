@@ -4,39 +4,63 @@
 
 .filter-category {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &--title {
     @include tittleMobile;
     margin-top: 28px;
+    align-self: start;
   }
 
-  &__form {
+  &__forms {
     width: 90%;
-    display: inline-flex;
-  }
-
-  &__filter {
-    width: 100%;
-    height: 32px;
-    margin-top: 12px;
+    margin-top: 16px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 
-    &--category,
-    &--years {
-      @include subTittleMobile;
-      border: none;
-      width: 240px;
+    &--filter-category {
+      width: 230px;
       height: 44px;
-      color: $color-dark-primary;
-      padding: 4px 20px;
-      border-radius: 12px;
-      box-shadow: $shadow-light;
+
+      &--select-category {
+        width: 100%;
+        height: 100%;
+        @include subTittleMobile;
+        border: none;
+        color: $color-dark-primary;
+        padding: 4px 15px;
+        border-radius: 12px;
+        box-shadow: $shadow-light;
+      }
+    }
+    &--filter-year {
+      width: 100px;
+      height: 44px;
+
+      &--select-year {
+        width: 100%;
+        height: 100%;
+        @include subTittleMobile;
+        border: none;
+        color: $color-dark-primary;
+        padding: 4px 15px;
+        border-radius: 12px;
+        box-shadow: $shadow-light;
+      }
     }
 
-    &--years {
-      width: 100px;
-      padding: 4px 10px;
+    & label {
+      color: $color-dark-primary;
+      @include ParagraphsMobile;
+    }
+
+    & p {
+      color: $color-dark-primary;
+      height: 20px;
+      align-self: flex-end;
+      @include subTittleMobile;
     }
   }
 }
