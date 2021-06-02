@@ -1,0 +1,73 @@
+@import "../../assets/scss/reset";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+/* sidebar Nav */
+
+.navBar {
+  // position: relative;
+  display: inline-flex;
+  align-items: center;
+  &__icon-menu {
+    position: relative;
+    // z-index: 10;
+    cursor: pointer;
+    font-size: 32px;
+    transform: translateX(-16px);
+    color: $color-light-primary;
+  }
+  &__list {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    max-width: 200px;
+    height: 140px;
+    background-color: $color-light-primary;
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: 0 0 0 20px;
+    transition: all 0.5s ease-in-out;
+    &:target {
+      height: auto;
+    }
+    &.showMenu {
+      display: inline-flex;
+      visibility: visible;
+      opacity: 1;
+      // transition: all 0.5s ease-in-out;
+    }
+
+    & .nav__list--home {
+      margin: 24px 0 4px 12px;
+    }
+
+    & .nav__list--statistic {
+      margin: 4px 0 4px 12px;
+    }
+
+    & .nav__list--about-us {
+      margin: 4px 0 24px 12px;
+    }
+
+    & .nav__list--home,
+    .nav__list--statistic,
+    .nav__list--about-us {
+      list-style: none;
+
+      & a {
+        text-decoration: none;
+        color: $color-dark-primary;
+        @include tittleMobile;
+
+        & i {
+          font-size: 24px;
+          color: $color-dark-light;
+          padding-right: 4px;
+        }
+      }
+    }
+  }
+}

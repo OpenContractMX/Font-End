@@ -10,6 +10,10 @@ export const FilterCategory = ({ filter, setFilter }) => {
     setFilter({ ...filter, year: e.target.value });
   };
 
+  if (filter.year !== ("Año", "") && filter.category !== ("Categoria", "")) {
+    getContracts();
+    // console.log("fn ejecutada");
+  }
   const categorys = [
     "Categoria",
     "seguridad",

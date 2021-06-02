@@ -1,0 +1,65 @@
+@import "../../assets/scss/reset";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.card-presentation {
+  width: 80%;
+  min-width: 240px;
+  max-width: 400px;
+  min-height: 150px;
+  margin: 15px auto;
+  padding: 15px;
+  background-color: $color-light-primary;
+  border-radius: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+  color: $color-dark-primary;
+  text-align: center;
+  &__image-card {
+    display: block;
+    & img {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      width: 105px;
+      height: 105px;
+    }
+  }
+  &__title-name {
+    margin-top: $sizeParagraphsMobile;
+    @include subTittleMobile;
+    font-weight: 500;
+  }
+  &__title-job-title {
+    margin-top: $sizeParagraphsMobile;
+    @include subTittleMobile;
+    font-weight: 500;
+  }
+  &__container-icons {
+    margin-top: $sizeParagraphsMobile;
+    // display: flex;
+    // flex-wrap: wrap;
+    // margin: 0 auto;
+    &-linkedin-icon {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+      & i {
+        color: $color-dark-light;
+        font-size: 30px;
+      }
+    }
+    &-twitter-icon {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+      & i {
+        color: $color-dark-light;
+        font-size: 30px;
+      }
+    }
+  }
+}
