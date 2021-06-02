@@ -22,34 +22,40 @@ export const FilterPerTime = ({ filterTime, setFilterTime }) => {
   return (
     <section className="filter-time">
       <h2 className="filter-time--title">Filtar por:</h2>
-      <form htmlFor="from-filter-time" className="filter-time__filter">
-        <label>Mes</label>
-        <select
-          className="filter-time__filter--month"
-          onChange={handleOnChangeMonth}
-          value={filterTime.month}
-        >
-          {months.map((month, index) => (
-            <option key={index} value={month} defaultValue="pepito">
-              {month}
-            </option>
-          ))}
-        </select>
+      <div className="filter-time__forms">
+        <form htmlFor="form-filter-month" className="filter-time__forms-month">
+          <label>Mes:</label>
+          <select
+            className="filter-time__forms-month--select"
+            onChange={handleOnChangeMonth}
+            value={filterTime.month}
+          >
+            {months.map((month, index) => (
+              <option key={index} value={month} defaultValue="pepito">
+                {month}
+              </option>
+            ))}
+          </select>
+        </form>
         <span>Ó</span>
-        <label>Trimestre</label>
-
-        <select
-          className="filter-time__filter--quarter"
-          onChange={handleOnChangeQuarter}
-          value={filterTime.quarter}
+        <form
+          htmlFor="form-filter-quarter"
+          className="filter-time__forms-quarter"
         >
-          {quarters.map((quarter, index) => (
-            <option key={index} value={quarter}>
-              {quarter}
-            </option>
-          ))}
-        </select>
-      </form>
+          <label>Trimestre:</label>
+          <select
+            className="filter-time__forms-quarter--select"
+            onChange={handleOnChangeQuarter}
+            value={filterTime.quarter}
+          >
+            {quarters.map((quarter, index) => (
+              <option key={index} value={quarter}>
+                {quarter}
+              </option>
+            ))}
+          </select>
+        </form>
+      </div>
     </section>
   );
 };

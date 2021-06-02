@@ -62,7 +62,7 @@ export const SectionContracts = ({ filterTime }) => {
   }, [filterTime]);
   return (
     <section className="section-contracts">
-      <h2 className="section-contracts--title">Contratos</h2>
+      <h2 className="section-contracts--title">Contratos:</h2>
       <p className="section-contracts--total">
         Total de contratos: {totalContracts.contracts_number}
       </p>
