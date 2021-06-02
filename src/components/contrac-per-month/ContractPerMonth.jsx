@@ -7,7 +7,8 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
+  // Legend,
+  ResponsiveContainer,
 } from "recharts";
 
 export const ContractPerMonth = ({ contractsChars }) => {
@@ -67,41 +68,42 @@ export const ContractPerMonth = ({ contractsChars }) => {
     <section className="container__contract-month">
       <h2 className="container__contract-month--title">Contratos por Mes:</h2>
       <div className="container__contract-month--chart-wrap">
-        <LineChart
-          width={400}
-          height={260}
-          data={data}
-          margin={{
-            top: 5,
-            right: 0,
-            left: 10,
-            bottom: 5,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <CartesianGrid horizontal="true" vertical="" stroke="#243240" />
-          <XAxis dataKey="name" tick={{ fill: "#000" }} />
-          <YAxis tick={{ fill: "#000" }} />
-          <Tooltip
-            contentStyle={{ backgroundColor: "#fff", color: "#000" }}
-            itemStyle={{ color: "#000" }}
-            cursor={false}
-          />
-          <Legend />
-          <Line
-            type="monotone"
-            dataKey="contratos"
-            stroke="#fdac41"
-            strokeWidth="3"
-            dot={{ fill: "#2e4355", stroke: "#1a233a", strokeWidth: 2, r: 2 }}
-            activeDot={{
-              fill: "#2e4355",
-              stroke: "#5a8dee",
-              strokeWidth: 2,
-              r: 5,
+        <ResponsiveContainer width="100%" aspect={1.5}>
+          <LineChart
+            width={400}
+            height={260}
+            data={data}
+            margin={{
+              top: 5,
+              right: 0,
+              left: 10,
+              bottom: 5,
             }}
-          />
-        </LineChart>
+          >
+            <CartesianGrid strokeDasharray="3 3" stroke="#243240" />
+            <XAxis dataKey="name" tick={{ fill: "#000" }} />
+            <YAxis tick={{ fill: "#000" }} />
+            <Tooltip
+              contentStyle={{ backgroundColor: "#fff", color: "#000" }}
+              itemStyle={{ color: "#000" }}
+              cursor={false}
+            />
+            {/* <Legend /> */}
+            <Line
+              type="monotone"
+              dataKey="contratos"
+              stroke="#fdac41"
+              strokeWidth="3"
+              dot={{ fill: "#2e4355", stroke: "#1a233a", strokeWidth: 2, r: 2 }}
+              activeDot={{
+                fill: "#2e4355",
+                stroke: "#5a8dee",
+                strokeWidth: 2,
+                r: 5,
+              }}
+            />
+          </LineChart>
+        </ResponsiveContainer>
       </div>
     </section>
   );

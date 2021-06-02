@@ -7,7 +7,8 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
+  ResponsiveContainer,
+  // Legend,
 } from "recharts";
 
 export const ChartsContractsExpenses = ({ contractsChars }) => {
@@ -26,7 +27,7 @@ export const ChartsContractsExpenses = ({ contractsChars }) => {
 
   const gettingTopContracts = () => {
     const newContract = contracts.map((contract, index) => ({
-      name: index + 1,
+      name: `ID: ${index + 1}`,
       inversion: contract.amount,
     }));
 
@@ -47,25 +48,30 @@ export const ChartsContractsExpenses = ({ contractsChars }) => {
         Top 10 contratos en gastos:
       </h2>
       <div className="container__contract-expense--expenses-wrap">
-        <BarChart
-          className="container__contract-expense--expenses-wrap--chart"
-          width={380}
-          height={240}
-          data={topContracts}
-          margin={{
-            top: 10,
-            right: 10,
-            left: 0,
-            bottom: 10,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="inversion" fill={"#fdac41"} />
-        </BarChart>
+        <ResponsiveContainer width="100%" aspect={1.5}>
+          <BarChart
+            className="container__contract-expense--expenses-wrap--chart"
+            width={380}
+            height={240}
+            data={topContracts}
+            margin={{
+              top: 10,
+              right: 10,
+              left: 0,
+              bottom: 10,
+            }}
+          >
+            <CartesianGrid horizontal="true" vertical="" stroke="#243240" />
+            <XAxis dataKey="name" tick={{ fill: "#1a233a" }} />
+            <YAxis tick={{ fill: "#1a233a" }} />
+            <Tooltip
+              contentStyle={{ backgroundColor: "#fff", color: "#1a233a" }}
+              itemStyle={{ color: "#1a233a" }}
+            />
+            {/* <Legend /> */}
+            <Bar dataKey="inversion" fill={"#fdac41"} />
+          </BarChart>
+        </ResponsiveContainer>
       </div>
       <div className="container__contract-expense--wrap">
         {contracts[0].amount !== 0
