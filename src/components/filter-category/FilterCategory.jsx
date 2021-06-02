@@ -13,21 +13,6 @@ export const FilterCategory = ({ filter, setFilter }) => {
     setFilter({ ...filter, year: e.target.value });
   };
 
-  const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
-
-  const getContracts = async () => {
-    try {
-      let response = await axios.get(
-        `${API_BASE}category=${filter.category}&year=${filter.year}`,
-        { headers: { "Access-Control-Allow-Origin": "*" } }
-      );
-      let resContracts = response.data.response;
-      console.log(resContracts, resContracts.contracts);
-      console.log(`cantidad de contratos: ${resContracts.contracts_number}`);
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   if (filter.year !== ("Año", "") && filter.category !== ("Categoria", "")) {
     getContracts();
