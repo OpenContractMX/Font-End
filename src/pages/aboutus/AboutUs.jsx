@@ -9,7 +9,7 @@ import jorgePicture from "../../assets/img/jorge.jpg";
 export const AboutUs = () => {
   return (
     <main className="about-us">
-      <div class="about-us__title">
+      <div className="about-us__title">
         <h2>Equipo técnico</h2>
       </div>
       <CardPresentation
