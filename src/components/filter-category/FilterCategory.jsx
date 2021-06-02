@@ -23,7 +23,7 @@ export const FilterCategory = ({ filter, setFilter }) => {
       );
       let resContracts = response.data.response;
       console.log(resContracts, resContracts.contracts);
-      console.log(`cantidade de contratos: ${resContracts.contracts_number}`);
+      console.log(`cantidad de contratos: ${resContracts.contracts_number}`);
     } catch (error) {
       console.log(error);
     }

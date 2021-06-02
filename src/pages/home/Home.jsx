@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.scss";
-import { TypeOfContract } from "../../components/type-of-contract";
 import filtrarComponentImg from "../../assets/img/filtrar.jpg";
 import datosContratosComponentImg from "../../assets/img/cardDatosContratos.png";
 import topDiezComponentImg from "../../assets/img/top10.jpg";
@@ -82,12 +81,15 @@ export const Home = () => {
         </figure>
       </div>
       <p className="home__paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit.
+        Toda la información que puede ser obtenida por esta aplicación fue
+        rescatada y procesada tal y como era en el 14 de mayo del 2021 en esta
+        entrada en el portal de la{" "}
+        <a href="https://datos.gob.mx/busca/dataset/concentrado-de-contrataciones-abiertas-de-la-apf-shcp/resource/aa36c461-a1d3-4373-bfb5-ca479ed86f26?inner_span=True">
+          {" "}
+          SHCP
+        </a>
+        (Secretaria de Haciendo y Crédito Público).
       </p>
-      <TypeOfContract />
-
       <div className="home__container-chart">
         <figure className="home__container-chart--logo">
           <img src={chartHomeImg} alt="Imagen del Home" />

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { HamburgerMenu } from "../hamburger-menu/HamburgerMenu";
+import { HamburgerMenu } from "../hamburger-menu/HamburgerMenu";
 import "./Header.scss";
 import logo from "../../assets/img/logo.png";
 
@@ -30,9 +30,10 @@ export const Header = () => {
         </figure>
         <span className="header__container-logo--name">OpenContractMX</span>
       </div>
-      <nav className="header__nav" id="header__nav">
-        {/* <i className="header__nav--icon-menu fas fa-bars" onClick={Toggle}></i>
-        <ul className="header__nav--list" id="menu">
+      {/* <nav className="header__nav"> */}
+      <HamburgerMenu className="header__nav--list" />
+      {/* <i className="header__nav--icon-menu fas fa-bars" onClick={Toggle}></i> */}
+      {/*<ul className="header__nav--list" id="menu">
           <li className="nav__list--home">
             <Link to="/" className="list__home--name">
               <i className="list__home--icon-home fas fa-home"></i>
@@ -52,12 +53,7 @@ export const Header = () => {
             </Link>
           </li>
         </ul> */}
-        {/* <HamburgerMenu
-          right
-          pageWrapId={"header__nav"}
-          outerContainerId={"header"}
-        /> */}
-      </nav>
+      {/* </nav> */}
     </header>
   );
 };
