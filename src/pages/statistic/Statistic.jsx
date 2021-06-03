@@ -10,9 +10,6 @@ import { AverageExecutionContract } from "../../components/average-execution-con
 import "./Statistic.scss";
 
 export const Statistic = ({ filter, setFilter }) => {
-  // const [filter, setFilter] = useState({ category: "Categoria", year: "Año" });
-  // console.log("estado>>>", filter);
-
   const [contractsChars, setContractsChars] = useState({
     contracts_number: "0",
     inversion: 0,
@@ -54,7 +51,6 @@ export const Statistic = ({ filter, setFilter }) => {
         { headers: { "Access-Control-Allow-Origin": "*" } }
       );
       setContractsChars(response.data.response);
-      // console.log("response>>>", response.data.response);
     } catch (error) {
       console.log(error);
     }

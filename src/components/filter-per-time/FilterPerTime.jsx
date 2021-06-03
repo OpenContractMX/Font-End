@@ -3,7 +3,6 @@ import "./FilterPerTime.scss";
 
 export const FilterPerTime = ({ filterTime, setFilterTime }) => {
   const handleOnChangeMonth = (e) => {
-    // console.log(e.target.value);
     setFilterTime({
       ...filterTime,
       month: e.target.value,
@@ -12,7 +11,6 @@ export const FilterPerTime = ({ filterTime, setFilterTime }) => {
   };
 
   const handleOnChangeQuarter = (e) => {
-    // console.log(e.target.value);
     setFilterTime({ ...filterTime, quarter: e.target.value, month: "Mes" });
   };
   const months = ["Mes", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
