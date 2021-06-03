@@ -2,27 +2,45 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/mixins";
 
-.container-contracts {
+.section-contracts {
   width: 100%;
+  margin-top: 60px;
 
   &--title {
+    margin: 32px 0;
     color: $color-dark-primary;
-    margin-top: 28px;
     text-align: center;
     @include tittleMobile;
+  }
+  &--total {
+    margin-top: 24px;
+    color: $color-dark-primary;
+    @include subTittleMobile;
+  }
+  &--no-contracts,
+  &--filter {
+    margin-top: 24px;
+    color: $color-dark-primary;
+    @include ParagraphsMobile;
   }
 
   &__contract-wrap {
     width: 100%;
     margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
 
     &--card-contract {
-      width: 100%;
+      width: 60%;
+      min-width: 280px;
+      max-width: 380px;
       height: auto;
       background-color: $color-light-primary;
       border-radius: 24px;
       padding: 12px;
-      margin-bottom: 16px;
+      // margin-bottom: 16px;
 
       & h3,
       & p {
@@ -35,6 +53,34 @@
       & p {
         @include ParagraphsMobile;
         margin-top: 0px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .section-contracts {
+    &--title {
+      @include titleTablet;
+    }
+    &--total {
+      @include subTitleTablet;
+    }
+    &--no-contracts,
+    &--filter {
+      @include ParagraphsTablet;
+    }
+
+    &__contract-wrap {
+      &--card-contract {
+        & h3,
+        & p {
+          @include subTitleTablet;
+        }
+
+        & p {
+          @include ParagraphsTablet;
+        }
       }
     }
   }

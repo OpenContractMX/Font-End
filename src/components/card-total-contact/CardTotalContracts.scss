@@ -3,17 +3,17 @@
 @import "../../assets/scss/mixins";
 
 .card-total-contract {
-  width: 240px;
-  height: 190px;
+  width: 280px;
+  height: 240px;
   background-color: $color-light-primary;
   border-radius: 12px;
-  margin-top: 28px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   &--all {
-    margin-top: 16px;
     display: flex;
     flex-direction: column;
 
@@ -43,17 +43,80 @@
     color: $color-dark-primary;
   }
 
-  & a {
-    transform: translateY(18px);
+  &__btn-route {
+    margin-top: 12px;
+    text-decoration: none;
+    &--ver-todos {
+      width: 200px;
+      height: 28px;
+      display: block;
+      border: $color-dark-primary;
+      border-radius: 8px;
+      cursor: pointer;
+      color: $color-light-primary;
+      background-color: $color-dark-primary;
+      text-decoration: none;
+      @include ParagraphsMobile;
+    }
   }
-  .btn-ver-todos {
-    width: 104px;
-    height: 28px;
-    border: $color-dark-primary;
-    border-radius: 8px;
-    cursor: pointer;
-    color: $color-light-primary;
-    background-color: $color-dark-primary;
-    @include ParagraphsMobile;
+
+  &__btn-download {
+    text-decoration: none;
+    margin-top: 12px;
+
+    &--download {
+      width: 200px;
+      height: 28px;
+      display: block;
+      border: $color-dark-primary;
+      border-radius: 8px;
+      background-color: $color-primary;
+      cursor: pointer;
+      color: $color-light-primary;
+      text-decoration: none;
+      @include ParagraphsMobile;
+
+      & i {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .card-total-contract {
+    width: 380px;
+    height: 300px;
+
+    &__investment {
+      &--amount {
+        @include ParagraphsTablet;
+      }
+    }
+
+    &--all,
+    &__investment {
+      @include subTitleTablet;
+    }
+
+    &--all span {
+      @include ParagraphsTablet;
+    }
+
+    &__btn-route {
+      &--ver-todos {
+        width: 240px;
+        height: 40px;
+        @include ParagraphsTablet;
+      }
+    }
+
+    &__btn-download {
+      &--download {
+        width: 240px;
+        height: 40px;
+        @include ParagraphsTablet;
+      }
+    }
   }
 }

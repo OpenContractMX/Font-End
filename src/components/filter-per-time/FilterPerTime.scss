@@ -3,36 +3,101 @@
 @import "../../assets/scss/mixins";
 
 .filter-time {
-  width: 100%;
+  width: 90%;
+  max-width: 600px;
+  min-width: 390px;
+  display: flex;
+  flex-direction: column;
 
   &--title {
     @include tittleMobile;
     margin-top: 28px;
   }
 
-  &__filter {
+  &__forms {
     width: 100%;
     height: 32px;
     margin-top: 12px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
-    &--month,
-    &--quarter {
-      @include subTittleMobile;
-      font-weight: bold;
-      border: none;
-      width: 180px;
-      height: 40px;
+    & span {
       color: $color-dark-primary;
-      padding: 4px 20px;
-      border-radius: 12px;
-      box-shadow: $shadow-light;
+      @include subTittleMobile;
+      height: 10px;
+      align-self: flex-end;
     }
 
-    &--month {
-      width: 84px;
-      padding: 4px 10px;
+    &-month {
+      width: 30%;
+      height: 40px;
+
+      & label {
+        color: $color-dark-primary;
+        @include subTittleMobile;
+      }
+      &--select {
+        border: none;
+        width: 100%;
+        height: 100%;
+        color: $color-dark-primary;
+        padding: 4px 20px;
+        border-radius: 12px;
+        box-shadow: $shadow-light;
+        @include subTittleMobile;
+      }
+    }
+
+    &-quarter {
+      width: 40%;
+      height: 40px;
+
+      & label {
+        color: $color-dark-primary;
+        @include subTittleMobile;
+      }
+      &--select {
+        border: none;
+        width: 100%;
+        height: 100%;
+        color: $color-dark-primary;
+        padding: 4px 20px;
+        border-radius: 12px;
+        box-shadow: $shadow-light;
+        @include subTittleMobile;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .filter-time {
+    &--title {
+      @include titleTablet;
+    }
+
+    &__forms {
+      & span {
+        @include subTitleTablet;
+      }
+
+      &-month {
+        & label {
+          @include subTitleTablet;
+        }
+        &--select {
+          @include subTitleTablet;
+        }
+      }
+
+      &-quarter {
+        & label {
+          @include subTitleTablet;
+        }
+        &--select {
+          @include subTitleTablet;
+        }
+      }
     }
   }
 }

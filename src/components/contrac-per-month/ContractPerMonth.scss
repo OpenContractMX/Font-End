@@ -14,10 +14,26 @@
     margin-top: 32px;
   }
 
+  &--chart-wrap {
+    width: 80%;
+    margin-left: -40px;
+  }
+
   &--chart {
     width: 280px;
     height: 140px;
     background-color: $color-light-primary;
     margin-top: 24px;
+  }
+}
+
+.recharts-tooltip-wrapper {
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .container__contract-month--title {
+    @include titleTablet;
+    margin-bottom: 32px;
   }
 }
