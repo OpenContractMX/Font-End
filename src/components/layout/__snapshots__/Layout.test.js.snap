@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[render content \`statistic / Layout\`] 1`] = `
+<DocumentFragment>
+  <header
+    class="header"
+    id="header"
+  >
+    <div
+      class="header__container-logo"
+    >
+      <figure
+        class="header__container-logo--logo"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="logo"
+            src="logo.png"
+          />
+        </a>
+      </figure>
+      <span
+        class="header__container-logo--name"
+      >
+        OpenContractMX
+      </span>
+    </div>
+    <nav
+      class="navBar"
+    >
+      <i
+        class="navBar__icon-menu"
+      >
+        <svg
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="3"
+            x2="21"
+            y1="12"
+            y2="12"
+          />
+          <line
+            x1="3"
+            x2="21"
+            y1="6"
+            y2="6"
+          />
+          <line
+            x1="3"
+            x2="21"
+            y1="18"
+            y2="18"
+          />
+        </svg>
+      </i>
+      <ul
+        class="navBar__list "
+      >
+        <li
+          class="nav__list--home"
+        >
+          <a
+            class="list__home--name"
+            href="/"
+          >
+            <i
+              class="list__home--icon-home fas fa-home"
+            />
+            Inicio
+          </a>
+        </li>
+        <li
+          class="nav__list--statistic"
+        >
+          <a
+            class="list__statistic--name"
+            href="/statistic"
+          >
+            <i
+              class="list__statistic--icon-chart fas fa-chart-line"
+            />
+            Estadística
+          </a>
+        </li>
+        <li
+          class="nav__list--about-us"
+        >
+          <a
+            class="list__about-us--name"
+            href="/about-us"
+          >
+            <i
+              class="list__about-us--icon-team fas fa-people-carry"
+            />
+            Sobre Nosotros
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <footer
+    class="footer"
+  >
+    <p
+      class="footer--Copyright"
+    >
+      Copyright
+    </p>
+  </footer>
+</DocumentFragment>
+`;

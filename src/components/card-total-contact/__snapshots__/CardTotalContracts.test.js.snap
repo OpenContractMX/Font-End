@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[render content \`statistic / CardTotalContacts\`] 1`] = `
+<DocumentFragment>
+  <div
+    class="card-total-contract"
+  >
+    <h2
+      class="card-total-contract--all"
+    >
+      Total Contratos:
+      <span>
+        0
+      </span>
+    </h2>
+    <h2
+      class="card-total-contract__investment"
+    >
+      Inversión:
+      <span
+        class="card-total-contract__investment--amount"
+      >
+        0
+        <span>
+          MXN
+        </span>
+      </span>
+    </h2>
+    <a
+      class="card-total-contract__btn-route"
+      href="/contracts?category=Categoria&year=Año"
+    >
+      <button
+        class="card-total-contract__btn-route--ver-todos"
+        type="button"
+      >
+        Ver todos
+      </button>
+    </a>
+    <a
+      class="card-total-contract__btn-download"
+      download=""
+      href="https://opencontractsmx.herokuapp.com/api/download?category=Categoria&year=Año"
+    >
+      <button
+        class="card-total-contract__btn-download--download"
+        type="button"
+      >
+        <i
+          class="fas fa-download card-total-contract__btn-download--icon-download"
+        />
+        <span>
+          Descargar Excel
+        </span>
+      </button>
+    </a>
+  </div>
+</DocumentFragment>
+`;

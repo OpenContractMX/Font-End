@@ -1,7 +1,7 @@
 import React from "react";
 import { Contracts } from "../../pages/contracts";
 
-import { Link, BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./CardTotalContracts.scss";
 
 export const CardTotalContacts = ({ filter, contractsChars }) => {

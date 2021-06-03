@@ -10,7 +10,7 @@ export const Contracts = () => {
     month: "Mes",
     quarter: "Trimestre",
   });
-  console.log(filterTime);
+  // console.log(filterTime);
 
   return (
     <main className="container-contracts">
