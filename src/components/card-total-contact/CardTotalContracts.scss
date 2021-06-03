@@ -57,6 +57,9 @@
       background-color: $color-dark-primary;
       text-decoration: none;
       @include ParagraphsMobile;
+      &:hover {
+        background-color: $color-secondary;
+      }
     }
   }
 
@@ -75,6 +78,9 @@
       color: $color-light-primary;
       text-decoration: none;
       @include ParagraphsMobile;
+      &:hover {
+        background-color: $color-tertiary;
+      }
 
       & i {
         margin-right: 8px;

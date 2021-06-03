@@ -14,6 +14,7 @@
     @include tittleMobile;
     margin-top: 28px;
     align-self: start;
+    color: $color-dark-primary;
   }
 
   &__forms {
@@ -33,9 +34,12 @@
         @include subTittleMobile;
         border: none;
         color: $color-dark-primary;
+        background-color: $color-light-primary;
+        cursor: pointer;
         padding: 4px 15px;
         border-radius: 12px;
         box-shadow: $shadow-light;
+        margin-top: 8px;
       }
     }
     &--filter-year {
@@ -48,9 +52,12 @@
         @include subTittleMobile;
         border: none;
         color: $color-dark-primary;
+        background-color: $color-light-primary;
+        cursor: pointer;
         padding: 4px 15px;
         border-radius: 12px;
         box-shadow: $shadow-light;
+        margin-top: 8px;
       }
     }
 

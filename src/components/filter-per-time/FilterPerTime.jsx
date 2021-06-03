@@ -21,7 +21,7 @@ export const FilterPerTime = ({ filterTime, setFilterTime }) => {
 
   return (
     <section className="filter-time">
-      <h2 className="filter-time--title">Filtar por:</h2>
+      <h2 className="filter-time--title">Filtrar por:</h2>
       <div className="filter-time__forms">
         <form htmlFor="form-filter-month" className="filter-time__forms-month">
           <label>Mes:</label>
