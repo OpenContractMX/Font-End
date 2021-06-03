@@ -29,7 +29,7 @@ export const FilterCategory = ({ filter, setFilter }) => {
 
   return (
     <section className="filter-category">
-      <h2 className="filter-category--title">Filtar:</h2>
+      <h2 className="filter-category--title">Filtrar:</h2>
       <div className="filter-category__forms">
         <form
           htmlFor="filter-category"

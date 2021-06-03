@@ -77,7 +77,7 @@ export const Statistic = ({ filter, setFilter }) => {
         </p>
       ) : filter.category === "Categoria" && filter.year === "Año" ? (
         <p className="container-statistic--no-filter">
-          Filtra por categoria y año para optener datos{" "}
+          Filtra por categoria y año para obtener datos{" "}
         </p>
       ) : (
         <Fragment></Fragment>
