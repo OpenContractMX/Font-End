@@ -11,18 +11,54 @@ export const FilterCategory = ({ filter, setFilter }) => {
   };
 
   const categorys = [
-    "Categoria",
-    "seguridad",
-    "salud",
-    "energia",
-    "economia",
-    "gobernacion",
-    "medio_ambiente",
-    "educacion",
-    "comunicacion_transporte",
-    "social",
-    "investigacion",
-    "trabajo",
+    {
+      key: "Categoría",
+      value: "Categoría",
+    },
+    {
+      key: "Seguridad",
+      value: "seguridad",
+    },
+    {
+      key: "Salud",
+      value: "salud",
+    },
+    {
+      key: "Energía",
+      value: "energia",
+    },
+    {
+      key: "Economía",
+      value: "economia",
+    },
+    {
+      key: "Gobernación",
+      value: "gobernacion",
+    },
+    {
+      key: "Medio Ambiente",
+      value: "medio_ambiente",
+    },
+    {
+      key: "Educación",
+      value: "educacion",
+    },
+    {
+      key: "Comunicación y Transporte",
+      value: "comunicacion_transporte",
+    },
+    {
+      key: "Social",
+      value: "social",
+    },
+    {
+      key: "Investigación",
+      value: "investigacion",
+    },
+    {
+      key: "Trabajo",
+      value: "trabajo",
+    },
   ];
 
   const years = ["Año", 2015, 2016, 2017, 2018];
@@ -42,8 +78,8 @@ export const FilterCategory = ({ filter, setFilter }) => {
             value={filter.category}
           >
             {categorys.map((category, index) => (
-              <option key={index} value={category}>
-                {category}
+              <option key={index} value={category.value}>
+                {category.key}
               </option>
             ))}
           </select>

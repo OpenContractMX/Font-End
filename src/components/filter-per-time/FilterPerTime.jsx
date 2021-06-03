@@ -13,9 +13,85 @@ export const FilterPerTime = ({ filterTime, setFilterTime }) => {
   const handleOnChangeQuarter = (e) => {
     setFilterTime({ ...filterTime, quarter: e.target.value, month: "Mes" });
   };
-  const months = ["Mes", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  // const months = ["Mes", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  const months = [
+    {
+      key: "Mes",
+      value: "Mes",
+    },
+    {
+      key: "Enero",
+      value: 1,
+    },
+    {
+      key: "Febrero",
+      value: 2,
+    },
+    {
+      key: "Marzo",
+      value: 3,
+    },
+    {
+      key: "Abril",
+      value: 4,
+    },
+    {
+      key: "Mayo",
+      value: 5,
+    },
+    {
+      key: "Junio",
+      value: 6,
+    },
+    {
+      key: "Julio",
+      value: 7,
+    },
+    {
+      key: "Agosto",
+      value: 8,
+    },
+    {
+      key: "Septiembre",
+      value: 9,
+    },
+    {
+      key: "Octubre",
+      value: 10,
+    },
+    {
+      key: "Noviembre",
+      value: 11,
+    },
+    {
+      key: "Diciembre",
+      value: 12,
+    },
+  ];
 
-  const quarters = ["Trimestre", 1.0, 2.0, 3.0, 4.0];
+  // const quarters = ["Trimestre", 1.0, 2.0, 3.0, 4.0];
+  const quarters = [
+    {
+      key: "Trimestre",
+      value: "Trimestre",
+    },
+    {
+      key: "Primer Trimestre",
+      value: 1.0,
+    },
+    {
+      key: "Segundo Trimestre",
+      value: 2.0,
+    },
+    {
+      key: "Tercer Trimestre",
+      value: 3.0,
+    },
+    {
+      key: "Cuarto Trimestre",
+      value: 4.0,
+    },
+  ];
 
   return (
     <section className="filter-time">
@@ -29,8 +105,8 @@ export const FilterPerTime = ({ filterTime, setFilterTime }) => {
             value={filterTime.month}
           >
             {months.map((month, index) => (
-              <option key={index} value={month} defaultValue="pepito">
-                {month}
+              <option key={index} value={month.value} defaultValue="pepito">
+                {month.key}
               </option>
             ))}
           </select>
@@ -47,8 +123,8 @@ export const FilterPerTime = ({ filterTime, setFilterTime }) => {
             value={filterTime.quarter}
           >
             {quarters.map((quarter, index) => (
-              <option key={index} value={quarter}>
-                {quarter}
+              <option key={index} value={quarter.value}>
+                {quarter.key}
               </option>
             ))}
           </select>

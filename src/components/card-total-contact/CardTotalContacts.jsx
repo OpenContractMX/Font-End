@@ -1,5 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Contracts } from "../../pages/contracts";
+
+import { Link, BrowserRouter } from "react-router-dom";
 import "./CardTotalContracts.scss";
 
 export const CardTotalContacts = ({ filter, contractsChars }) => {
@@ -21,6 +23,7 @@ export const CardTotalContacts = ({ filter, contractsChars }) => {
           <span>MXN</span>
         </span>
       </h2>
+
       <Link
         className="card-total-contract__btn-route"
         to={`/contracts?category=${filter.category}&year=${filter.year}`}

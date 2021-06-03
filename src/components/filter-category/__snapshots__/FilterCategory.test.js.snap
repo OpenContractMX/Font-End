@@ -24,64 +24,64 @@ exports[`render content 1`] = `
           class="filter-category__forms--filter-category--select-category"
         >
           <option
-            value="Categoria"
+            value="Categoría"
           >
-            Categoria
+            Categoría
           </option>
           <option
             value="seguridad"
           >
-            seguridad
+            Seguridad
           </option>
           <option
             value="salud"
           >
-            salud
+            Salud
           </option>
           <option
             value="energia"
           >
-            energia
+            Energía
           </option>
           <option
             value="economia"
           >
-            economia
+            Economía
           </option>
           <option
             value="gobernacion"
           >
-            gobernacion
+            Gobernación
           </option>
           <option
             value="medio_ambiente"
           >
-            medio_ambiente
+            Medio Ambiente
           </option>
           <option
             value="educacion"
           >
-            educacion
+            Educación
           </option>
           <option
             value="comunicacion_transporte"
           >
-            comunicacion_transporte
+            Comunicación y Transporte
           </option>
           <option
             value="social"
           >
-            social
+            Social
           </option>
           <option
             value="investigacion"
           >
-            investigacion
+            Investigación
           </option>
           <option
             value="trabajo"
           >
-            trabajo
+            Trabajo
           </option>
         </select>
       </form>
