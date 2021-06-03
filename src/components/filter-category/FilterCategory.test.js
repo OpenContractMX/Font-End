@@ -5,10 +5,6 @@ import { FilterCategory } from "./";
 
 it("render content", () => {
   const filter = { category: "Categoria", year: "Año" };
-  const component = render(<FilterCategory filter={filter} />);
-
-  component.getByText("Filtrar:");
-  component.getByText("Categoria:");
-  component.getByText("Año:");
-  component.debug();
+  const { asFragment } = render(<FilterCategory filter={filter} />);
+  expect(asFragment()).toMatchSnapshot();
 });
