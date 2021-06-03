@@ -6,10 +6,12 @@ import { CardTotalContacts } from "../../components/card-total-contact";
 import { ChartsContractsExpenses } from "../../components/charts-contracts-expenses";
 import { ContractPerMonth } from "../../components/contrac-per-month";
 import { AverageExecutionContract } from "../../components/average-execution-contract";
+import { LoadingBar } from "../../components/LoadingBar";
 
 import "./Statistic.scss";
 
 export const Statistic = ({ filter, setFilter }) => {
+  const [isLoading, setIsLoading] = useState(false);
   const [contractsChars, setContractsChars] = useState({
     contracts_number: "0",
     inversion: 0,
@@ -45,17 +47,29 @@ export const Statistic = ({ filter, setFilter }) => {
   const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
 
   const getContracts = async () => {
+    setIsLoading(true);
     try {
       let response = await axios.get(
         `${API_BASE}category=${filter.category}&year=${filter.year}`,
         { headers: { "Access-Control-Allow-Origin": "*" } }
       );
       setContractsChars(response.data.response);
+      setIsLoading(false);
     } catch (error) {
       console.log(error);
     }
   };
 
+  const checkFromRender = () => {
+    if (
+      filter.category !== "Categoria" &&
+      filter.year !== "Año" &&
+      contractsChars.inversion === 0
+    ) {
+      return true;
+    }
+    return false;
+  };
   useEffect(() => {
     if (filter.category !== "Categoria" && filter.year !== "Año") {
       getContracts();
@@ -65,9 +79,9 @@ export const Statistic = ({ filter, setFilter }) => {
   return (
     <main className="container-statistic">
       <FilterCategory setFilter={setFilter} filter={filter} />
-      {filter.category !== "Categoria" &&
-      filter.year !== "Año" &&
-      contractsChars.inversion === 0 ? (
+      {isLoading ? (
+        <LoadingBar />
+      ) : checkFromRender() ? (
         <p className="container-statistic--no-contracts">
           Para la categoria y el año no se encontraros datos{" "}
         </p>

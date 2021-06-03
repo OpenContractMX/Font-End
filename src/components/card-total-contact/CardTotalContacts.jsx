@@ -18,7 +18,7 @@ export const CardTotalContacts = ({ filter, contractsChars }) => {
         Inversión:
         <span className="card-total-contract__investment--amount">
           {numberWithCommas(contractsChars.inversion)}
-          <span>MX</span>
+          <span>MXN</span>
         </span>
       </h2>
       <Link

@@ -4,8 +4,11 @@ import { useLocation } from "react-router-dom";
 import queryString from "query-string";
 import axios from "axios";
 
+import { LoadingBar } from "../LoadingBar";
 export const SectionContracts = ({ filterTime }) => {
   const [contracts, setContracts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
   const [totalContracts, setTotalContracts] = useState([
     {
       contracts: "0",
@@ -18,6 +21,8 @@ export const SectionContracts = ({ filterTime }) => {
   const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
 
   const getContractsMonth = async () => {
+    setIsLoading(true);
+
     try {
       let response = await axios.get(
         `${API_BASE}category=${category}&year=${year}&month=${filterTime.month}`,
@@ -25,12 +30,15 @@ export const SectionContracts = ({ filterTime }) => {
       );
       setContracts(response.data.response.contracts);
       setTotalContracts(response.data.response);
+      setIsLoading(false);
     } catch (error) {
       console.log(error);
     }
   };
 
   const getContractsQuarter = async () => {
+    setIsLoading(true);
+
     try {
       let response = await axios.get(
         `${API_BASE}category=${category}&year=${year}&trimester=${filterTime.quarter}`,
@@ -38,6 +46,7 @@ export const SectionContracts = ({ filterTime }) => {
       );
       setContracts(response.data.response.contracts);
       setTotalContracts(response.data.response);
+      setIsLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -51,6 +60,15 @@ export const SectionContracts = ({ filterTime }) => {
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
+  const checkFromRender = () => {
+    if (
+      (filterTime.month !== "Mes" && contracts.length === 0) ||
+      (filterTime.quarter !== "Trimestre" && contracts.length === 0)
+    ) {
+      return true;
+    }
+    return false;
+  };
 
   useEffect(() => {
     if (filterTime.month !== "Mes") {
@@ -60,17 +78,25 @@ export const SectionContracts = ({ filterTime }) => {
       getContractsQuarter();
     }
   }, [filterTime]);
+
   return (
     <section className="section-contracts">
-      <h2 className="section-contracts--title">Contratos:</h2>
+      {/* <h2 className="section-contracts--title">Contratos:</h2>
       <p className="section-contracts--total">
         Total de contratos: {totalContracts.contracts_number}
-      </p>
-      {(filterTime.month !== "Mes" && contracts.length === 0) ||
-      (filterTime.quarter !== "Trimestre" && contracts.length === 0) ? (
-        <p className="section-contracts--no-contracts">
-          No hay contratos, para el filtro actualemte seleccionado.
-        </p>
+      </p> */}
+      {isLoading ? (
+        <LoadingBar />
+      ) : checkFromRender() ? (
+        <>
+          <h2 className="section-contracts--title">Contratos:</h2>
+          <p className="section-contracts--total">
+            Total de contratos: {totalContracts.contracts_number}
+          </p>
+          <p className="section-contracts--no-contracts">
+            No hay contratos, para el filtro actualemte seleccionado.
+          </p>
+        </>
       ) : filterTime.month === "Mes" && filterTime.quarter === "Trimestre" ? (
         <p className="section-contracts--filter">
           Haz un filtro por mes o trimestre, para traer los datos
