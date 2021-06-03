@@ -5,6 +5,7 @@ import queryString from "query-string";
 import axios from "axios";
 
 import { LoadingBar } from "../LoadingBar";
+
 export const SectionContracts = ({ filterTime }) => {
   const [contracts, setContracts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -88,39 +89,40 @@ export const SectionContracts = ({ filterTime }) => {
       {isLoading ? (
         <LoadingBar />
       ) : checkFromRender() ? (
-        <>
-          <h2 className="section-contracts--title">Contratos:</h2>
-          <p className="section-contracts--total">
-            Total de contratos: {totalContracts.contracts_number}
-          </p>
-          <p className="section-contracts--no-contracts">
-            No hay contratos, para el filtro actualemte seleccionado.
-          </p>
-        </>
+        <p className="section-contracts--no-contracts">
+          No hay contratos, para el filtro actualemte seleccionado.
+        </p>
       ) : filterTime.month === "Mes" && filterTime.quarter === "Trimestre" ? (
         <p className="section-contracts--filter">
           Haz un filtro por mes o trimestre, para traer los datos
         </p>
       ) : (
-        <div className="section-contracts__contract-wrap">
-          {contracts.map((contract, index) => (
-            <div
-              className="section-contracts__contract-wrap--card-contract"
-              key={index}
-            >
-              <h3>Dependencia:</h3>
-              <p>{contract.buyer_name}</p>
-              <h3>Contrato:</h3>
-              <p>{tranformToCapitalize(contract.title)}</p>
-              <h3>Valor:</h3>
-              <p>
-                {numberWithCommas(contract.amount)} <span>MXN</span>
-              </p>
-              <h3>Fecha:</h3>
-              <p>{new Date(contract.date).toDateString()}</p>
-            </div>
-          ))}
-        </div>
+        <>
+          <h2 className="section-contracts--title">Contratos:</h2>
+          <p className="section-contracts--total">
+            Total de contratos: {totalContracts.contracts_number}
+          </p>
+
+          <div className="section-contracts__contract-wrap">
+            {contracts.map((contract, index) => (
+              <div
+                className="section-contracts__contract-wrap--card-contract"
+                key={index}
+              >
+                <h3>Dependencia:</h3>
+                <p>{contract.buyer_name}</p>
+                <h3>Contrato:</h3>
+                <p>{tranformToCapitalize(contract.title)}</p>
+                <h3>Valor:</h3>
+                <p>
+                  {numberWithCommas(contract.amount)} <span>MXN</span>
+                </p>
+                <h3>Fecha:</h3>
+                <p>{new Date(contract.date).toDateString()}</p>
+              </div>
+            ))}
+          </div>
+        </>
       )}
     </section>
   );

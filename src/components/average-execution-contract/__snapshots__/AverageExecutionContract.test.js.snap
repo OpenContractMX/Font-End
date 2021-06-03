@@ -21,25 +21,3 @@ exports[`[render content \`statistic / AverageExecutionContract\`] 1`] = `
   </div>
 </DocumentFragment>
 `;
-
-exports[`render content 1`] = `
-<DocumentFragment>
-  <div
-    class="card-average-contract"
-  >
-    <h3
-      class="card-average-contract--tittle"
-    >
-      Ejecución Promedio de los contratos:
-    </h3>
-    <p
-      class="card-average-contract--quantity"
-    >
-      0 
-      <span>
-        Meses
-      </span>
-    </p>
-  </div>
-</DocumentFragment>
-`;

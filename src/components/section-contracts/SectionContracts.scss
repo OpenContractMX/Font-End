@@ -6,6 +6,7 @@
   width: 100%;
   margin-top: 20px;
   display: flex;
+  flex-direction: column;
 
   &--title {
     margin: 32px 0;
@@ -16,6 +17,7 @@
   &--total {
     margin-top: 24px;
     color: $color-dark-primary;
+    text-align: center;
     @include subTittleMobile;
   }
   &--no-contracts,
