@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./SectionContracts.scss";
-import { useLocation } from "react-router-dom";
-import queryString from "query-string";
+
 import axios from "axios";
 
 import { LoadingBar } from "../LoadingBar";
 
-export const SectionContracts = ({ filterTime }) => {
+export const SectionContracts = ({ filterTime, category, year }) => {
   const [contracts, setContracts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -16,10 +15,11 @@ export const SectionContracts = ({ filterTime }) => {
       contracts_number: "0",
     },
   ]);
-  const { search } = useLocation();
-  const { category, year } = queryString.parse(search);
 
   const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
+
+  const URL_API_DOWNLOAD =
+    "https://opencontractsmx.herokuapp.com/api/download?";
 
   const getContractsMonth = async () => {
     setIsLoading(true);
@@ -82,10 +82,6 @@ export const SectionContracts = ({ filterTime }) => {
 
   return (
     <section className="section-contracts">
-      {/* <h2 className="section-contracts--title">Contratos:</h2>
-      <p className="section-contracts--total">
-        Total de contratos: {totalContracts.contracts_number}
-      </p> */}
       {isLoading ? (
         <LoadingBar />
       ) : checkFromRender() ? (
@@ -99,6 +95,27 @@ export const SectionContracts = ({ filterTime }) => {
       ) : (
         <>
           <h2 className="section-contracts--title">Contratos:</h2>
+          <a
+            className="section-contracts__btn-download"
+            href={
+              filterTime.quarter === "Trimestre" ? (
+                `${URL_API_DOWNLOAD}category=${category}&year=${year}&month=${filterTime.month}`
+              ) : <></> || filterTime === "Mes" ? (
+                `${URL_API_DOWNLOAD}category=${category}&year=${year}&trimester=${filterTime.quarter}`
+              ) : (
+                <></>
+              )
+            }
+            download
+          >
+            <button
+              type="button"
+              className="section-contracts__btn-download--download"
+            >
+              <i className="fas fa-download section-contracts__btn-download--icon-download"></i>
+              <span>Descargar Excel</span>
+            </button>
+          </a>
           <p className="section-contracts--total">
             Total de contratos: {totalContracts.contracts_number}
           </p>

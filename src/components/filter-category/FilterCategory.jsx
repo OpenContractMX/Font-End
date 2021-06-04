@@ -71,7 +71,7 @@ export const FilterCategory = ({ filter, setFilter }) => {
           htmlFor="filter-category"
           className="filter-category__forms--filter-category"
         >
-          <label>Categoria:</label>
+          <label>Categoría:</label>
           <select
             className="filter-category__forms--filter-category--select-category"
             onChange={handleOnChangeCategory}

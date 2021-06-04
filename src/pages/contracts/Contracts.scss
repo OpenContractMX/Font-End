@@ -8,4 +8,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &__text {
+    color: $color-dark-primary;
+    @include subTittleMobile;
+    margin-top: 32px;
+
+    &--category,
+    &--year {
+      font-weight: bold;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container-contracts {
+    &__text {
+      @include subTitleTablet;
+    }
+  }
 }

@@ -77,19 +77,19 @@ export const FilterPerTime = ({ filterTime, setFilterTime }) => {
     },
     {
       key: "Primer Trimestre",
-      value: 1.0,
+      value: 1,
     },
     {
       key: "Segundo Trimestre",
-      value: 2.0,
+      value: 2,
     },
     {
       key: "Tercer Trimestre",
-      value: 3.0,
+      value: 3,
     },
     {
       key: "Cuarto Trimestre",
-      value: 4.0,
+      value: 4,
     },
   ];
 
