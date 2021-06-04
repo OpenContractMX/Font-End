@@ -29,11 +29,11 @@
   &__title-name {
     margin-top: $sizeParagraphsMobile;
     @include subTittleMobile;
-    font-weight: 500;
+    font-weight: 300;
   }
   &__title-job-title {
     @include subTittleMobile;
-    font-weight: 500;
+    font-weight: 700;
   }
   &__container-icons {
     margin-top: $sizeParagraphsMobile;
@@ -45,7 +45,7 @@
         color: $color-dark-light;
         font-size: 30px;
         &:hover {
-          color: $color-primary;
+          color: #0e76a8;
         }
       }
     }
@@ -57,7 +57,7 @@
         color: $color-dark-light;
         font-size: 30px;
         &:hover {
-          color: $color-primary;
+          color: #00acee;
         }
       }
     }

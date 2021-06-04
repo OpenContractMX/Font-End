@@ -7,13 +7,10 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  // Legend,
   ResponsiveContainer,
 } from "recharts";
 
 export const ContractPerMonth = ({ contractsChars }) => {
-  // console.log("=>", contractsChars.months);
-
   const data = [
     {
       name: "Ene.",
@@ -88,7 +85,6 @@ export const ContractPerMonth = ({ contractsChars }) => {
               itemStyle={{ color: "#000" }}
               cursor={false}
             />
-            {/* <Legend /> */}
             <Line
               type="monotone"
               dataKey="contratos"

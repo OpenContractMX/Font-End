@@ -1,1 +1,0 @@
-export { TypeOfContract } from "./TypeOfContract";

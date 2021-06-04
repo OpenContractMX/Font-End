@@ -17,3 +17,12 @@
     @include ParagraphsMobile;
   }
 }
+
+@media (min-width: 768px) {
+  .container-statistic {
+    &--no-contracts,
+    &--no-filter {
+      @include ParagraphsTablet;
+    }
+  }
+}

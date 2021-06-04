@@ -2,12 +2,11 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/mixins";
 
-/* sidebar Nav */
-
 .navBar {
   display: inline-flex;
   align-items: center;
   &__icon-menu {
+    height: 30px;
     position: relative;
     cursor: pointer;
     font-size: 32px;
