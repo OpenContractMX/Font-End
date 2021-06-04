@@ -23,11 +23,19 @@ main {
       color: $color-dark-primary;
       margin: $sizeLogoMobile 0;
     }
+
     &__paragraph {
       @include ParagraphsMobile;
       color: $color-dark-primary;
       margin: $sizeLogoMobile 0;
     }
+
+    &__paragraph--use {
+      color: $color-dark-primary;
+      margin: 24px 0 0 0;
+      @include ParagraphsMobile;
+    }
+
     &__container-example {
       margin-top: $sizeLogoMobile;
       &--img {

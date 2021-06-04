@@ -1,5 +1,4 @@
 import React from "react";
-import { Contracts } from "../../pages/contracts";
 
 import { Link } from "react-router-dom";
 import "./CardTotalContracts.scss";

@@ -14,10 +14,13 @@ export const Home = () => {
         <h1 className="home__title">OpenContractMX</h1>
         <h2 className="home__subtitle">
           Bienvenido, en esta plataforma podrás encontrar información y
-          estadísticas de interés referente a Contratos Federales.
+          estadísticas de interés referente a Contratos Federales de México.
         </h2>
+        <p className="home__paragraph--use">
+          Cómo puedes usar nuestra plataforma?
+        </p>
         <p className="home__paragraph">
-          1. Puedes filtrar por dependencias y año.
+          1. Puedes filtrar por Categoría y año.
         </p>
         <div className="home__container-example">
           <figure className="home__container-example--img">
@@ -62,7 +65,7 @@ export const Home = () => {
         </div>
         <p className="home__paragraph">
           6. Y un tiempo de ejecución promedio para estos contratos de la
-          dependencia detallada.
+          categoría detallada.
         </p>
         <div className="home__container-example">
           <figure className="home__container-example--img">
@@ -74,12 +77,13 @@ export const Home = () => {
         </div>
         <p className="home__paragraph">
           Toda la información que puede ser obtenida por esta aplicación fue
-          rescatada y procesada tal y como era en el 14 de mayo del 2021 en esta
-          entrada en el portal de la{" "}
+          rescatada y procesada con los datos obtenidos el 14 de mayo del 2021,
+          en el portal de la{" "}
           <a
             className="home__paragraph--link"
             href="https://datos.gob.mx/busca/dataset/concentrado-de-contrataciones-abiertas-de-la-apf-shcp/resource/aa36c461-a1d3-4373-bfb5-ca479ed86f26?inner_span=True"
             target="_blank"
+            rel="noreferrer"
           >
             {" "}
             SHCP
