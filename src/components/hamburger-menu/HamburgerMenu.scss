@@ -59,11 +59,28 @@
         text-decoration: none;
         color: $color-dark-primary;
         @include tittleMobile;
-
+        &:hover {
+          color: $color-dark-light;
+        }
         & i {
           font-size: 24px;
           color: $color-dark-light;
           padding-right: 4px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .navBar {
+    &__list {
+      max-width: 345px;
+      height: auto;
+      & .nav__list--home,
+      .nav__list--statistic,
+      .nav__list--about-us {
+        & a {
+          @include titleTablet;
         }
       }
     }

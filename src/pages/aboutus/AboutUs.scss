@@ -27,3 +27,14 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .about-us {
+    &__container {
+      &--title {
+        margin-top: $sizeSubtitleTablet;
+        @include titleTablet;
+      }
+    }
+  }
+}
