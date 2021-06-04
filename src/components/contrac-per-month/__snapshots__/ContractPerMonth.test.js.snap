@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[render content \`statistic / ContractPerMonth\`] 1`] = `
+<DocumentFragment>
+  <section
+    class="container__contract-month"
+  >
+    <h2
+      class="container__contract-month--title"
+    >
+      Contratos por Mes:
+    </h2>
+    <div
+      class="container__contract-month--chart-wrap"
+    >
+      <div
+        class="recharts-responsive-container"
+        style="width: 100%; height: 100%;"
+      />
+    </div>
+  </section>
+</DocumentFragment>
+`;

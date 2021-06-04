@@ -1,18 +1,17 @@
 import React, { useState, useEffect, Fragment } from "react";
-import axios from "axios";
-
+// import axios from "axios";
 import { FilterCategory } from "../../components/filter-category";
 import { CardTotalContacts } from "../../components/card-total-contact";
 import { ChartsContractsExpenses } from "../../components/charts-contracts-expenses";
 import { ContractPerMonth } from "../../components/contrac-per-month";
 import { AverageExecutionContract } from "../../components/average-execution-contract";
+import { LoadingBar } from "../../components/LoadingBar";
+import { getContracts } from "./getContracts";
 
 import "./Statistic.scss";
 
 export const Statistic = ({ filter, setFilter }) => {
-  // const [filter, setFilter] = useState({ category: "Categoria", year: "Año" });
-  // console.log("estado>>>", filter);
-
+  const [isLoading, setIsLoading] = useState(false);
   const [contractsChars, setContractsChars] = useState({
     contracts_number: "0",
     inversion: 0,
@@ -45,33 +44,44 @@ export const Statistic = ({ filter, setFilter }) => {
     },
   });
 
-  const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
+  // const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
 
-  const getContracts = async () => {
-    try {
-      let response = await axios.get(
-        `${API_BASE}category=${filter.category}&year=${filter.year}`,
-        { headers: { "Access-Control-Allow-Origin": "*" } }
-      );
-      setContractsChars(response.data.response);
-      // console.log("response>>>", response.data.response);
-    } catch (error) {
-      console.log(error);
+  // const getContracts = async () => {
+  //   setIsLoading(true);
+  //   try {
+  //     let response = await axios.get(
+  //       `${API_BASE}category=${filter.category}&year=${filter.year}`,
+  //       { headers: { "Access-Control-Allow-Origin": "*" } }
+  //     );
+  //     setContractsChars(response.data.response);
+  //     setIsLoading(false);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  const checkFromRender = () => {
+    if (
+      filter.category !== "Categoria" &&
+      filter.year !== "Año" &&
+      contractsChars.inversion === 0
+    ) {
+      return true;
     }
+    return false;
   };
-
   useEffect(() => {
     if (filter.category !== "Categoria" && filter.year !== "Año") {
-      getContracts();
+      getContracts({ setIsLoading, setContractsChars, filter });
     }
   }, [filter]);
 
   return (
     <main className="container-statistic">
       <FilterCategory setFilter={setFilter} filter={filter} />
-      {filter.category !== "Categoria" &&
-      filter.year !== "Año" &&
-      contractsChars.inversion === 0 ? (
+      {isLoading ? (
+        <LoadingBar />
+      ) : checkFromRender() ? (
         <p className="container-statistic--no-contracts">
           Para la categoria y el año no se encontraros datos{" "}
         </p>

@@ -1,4 +1,6 @@
 import React from "react";
+import { Contracts } from "../../pages/contracts";
+
 import { Link } from "react-router-dom";
 import "./CardTotalContracts.scss";
 
@@ -18,9 +20,10 @@ export const CardTotalContacts = ({ filter, contractsChars }) => {
         Inversión:
         <span className="card-total-contract__investment--amount">
           {numberWithCommas(contractsChars.inversion)}
-          <span>MX</span>
+          <span>MXN</span>
         </span>
       </h2>
+
       <Link
         className="card-total-contract__btn-route"
         to={`/contracts?category=${filter.category}&year=${filter.year}`}

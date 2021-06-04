@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[render content \`statistic / AverageExecutionContract\`] 1`] = `
+<DocumentFragment>
+  <div
+    class="card-average-contract"
+  >
+    <h3
+      class="card-average-contract--tittle"
+    >
+      Ejecución Promedio de los contratos:
+    </h3>
+    <p
+      class="card-average-contract--quantity"
+    >
+      0 
+      <span>
+        Meses
+      </span>
+    </p>
+  </div>
+</DocumentFragment>
+`;

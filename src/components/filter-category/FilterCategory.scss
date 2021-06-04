@@ -19,10 +19,12 @@
 
   &__forms {
     width: 90%;
+    height: 70px;
     max-width: 500px;
     margin-top: 16px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     &--filter-category {
       width: 230px;

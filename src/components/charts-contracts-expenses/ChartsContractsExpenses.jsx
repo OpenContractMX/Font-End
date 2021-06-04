@@ -8,7 +8,6 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  // Legend,
 } from "recharts";
 
 export const ChartsContractsExpenses = ({ contractsChars }) => {
@@ -68,7 +67,6 @@ export const ChartsContractsExpenses = ({ contractsChars }) => {
               contentStyle={{ backgroundColor: "#fff", color: "#1a233a" }}
               itemStyle={{ color: "#1a233a" }}
             />
-            {/* <Legend /> */}
             <Bar dataKey="inversion" fill={"#fdac41"} />
           </BarChart>
         </ResponsiveContainer>

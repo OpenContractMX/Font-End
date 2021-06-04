@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[render content \`statistic / NavOfContracts\`] 1`] = `
+<DocumentFragment>
+  <nav
+    class="nav-contracts"
+  >
+    <a
+      href="/statistic"
+    >
+      <button
+        class="nav-contracts--btn-volver"
+        type="button"
+      >
+        <i
+          class="fas fa-arrow-left icon-volver"
+        />
+        Volver
+      </button>
+    </a>
+  </nav>
+</DocumentFragment>
+`;
