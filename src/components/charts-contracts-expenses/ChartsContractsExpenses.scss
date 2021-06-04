@@ -16,8 +16,6 @@
   }
   &--expenses-wrap {
     width: 80%;
-    // height: 240px;
-    // padding-left: 10px;
   }
   &--chart {
     width: 280px;
@@ -67,7 +65,6 @@
 
     &--wrap {
       &--card {
-        // width: 348px;
         & h3 {
           @include subTitleTablet;
           & span {

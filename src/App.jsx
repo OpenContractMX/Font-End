@@ -17,7 +17,6 @@ export const App = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          {/* <Route exact path="/statistic" component={Statistic} /> */}
           <Route
             exact
             path="/statistic"

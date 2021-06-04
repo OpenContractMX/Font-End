@@ -1,5 +1,4 @@
 import React, { useState, useEffect, Fragment } from "react";
-// import axios from "axios";
 import { FilterCategory } from "../../components/filter-category";
 import { CardTotalContacts } from "../../components/card-total-contact";
 import { ChartsContractsExpenses } from "../../components/charts-contracts-expenses";
@@ -43,22 +42,6 @@ export const Statistic = ({ filter, setFilter }) => {
       12: 0,
     },
   });
-
-  // const API_BASE = "https://opencontractsmx.herokuapp.com/api/contracts?";
-
-  // const getContracts = async () => {
-  //   setIsLoading(true);
-  //   try {
-  //     let response = await axios.get(
-  //       `${API_BASE}category=${filter.category}&year=${filter.year}`,
-  //       { headers: { "Access-Control-Allow-Origin": "*" } }
-  //     );
-  //     setContractsChars(response.data.response);
-  //     setIsLoading(false);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
 
   const checkFromRender = () => {
     if (
