@@ -19,7 +19,7 @@ export const Contracts = () => {
   const { category, year } = queryString.parse(search);
   console.log(typeof category);
 
-  const validation = (data) => {
+  const changeOfName = (data) => {
     if (data === "comunicacion_transporte") {
       return "Comunicación y Tranpoosrte";
     }
@@ -60,7 +60,7 @@ export const Contracts = () => {
       <span className="container-contracts__text">
         Estas en la cantegoría:{" "}
         <span className="container-contracts__text--category">
-          {validation(category)}{" "}
+          {changeOfName(category)}{" "}
         </span>
         <span className="container-contracts__text--year">{year}</span>
       </span>

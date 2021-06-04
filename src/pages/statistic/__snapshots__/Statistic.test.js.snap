@@ -21,7 +21,7 @@ exports[`[render content \`statistic / Statistic\`] 1`] = `
           for="filter-category"
         >
           <label>
-            Categoria:
+            Categoría:
           </label>
           <select
             class="filter-category__forms--filter-category--select-category"

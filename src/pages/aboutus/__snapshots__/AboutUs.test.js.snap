@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[render component \`pages / AboutUs\`] 1`] = `
+<DocumentFragment>
+  <main
+    class="about-us"
+  >
+    <section
+      class="about-us__container"
+    >
+      <h2
+        class="about-us__container--title"
+      >
+        Equipo técnico
+      </h2>
+      <article
+        class="card-presentation"
+      >
+        <figure
+          class="card-presentation__image-card"
+        >
+          <img
+            alt=""
+            src="leo.jpg"
+          />
+           
+        </figure>
+        <p
+          class="card-presentation__title-name"
+        >
+          Leonardo Rincón
+        </p>
+        <p
+          class="card-presentation__title-job-title"
+        >
+          Frontend Developer
+        </p>
+        <div
+          class="card-presentation__container-icons"
+        >
+          <span
+            class="card-presentation__container-icons-linkedin-icon"
+          >
+            <a
+              href="https://www.linkedin.com/in/leo-rincon/"
+              target="_blank"
+            >
+              <i
+                class="fab fa-linkedin-in"
+              />
+            </a>
+          </span>
+          <span
+            class="card-presentation__container-icons-twitter-icon"
+          >
+            <a
+              href="https://twitter.com/LeoBotache7"
+              target="_blank"
+            >
+              <i
+                class="fab fa-twitter"
+              />
+            </a>
+          </span>
+        </div>
+      </article>
+      <article
+        class="card-presentation"
+      >
+        <figure
+          class="card-presentation__image-card"
+        >
+          <img
+            alt=""
+            src="jc.jpg"
+          />
+           
+        </figure>
+        <p
+          class="card-presentation__title-name"
+        >
+          Juan Camilo Garcés
+        </p>
+        <p
+          class="card-presentation__title-job-title"
+        >
+          Frontend Developer
+        </p>
+        <div
+          class="card-presentation__container-icons"
+        >
+          <span
+            class="card-presentation__container-icons-linkedin-icon"
+          >
+            <a
+              href="https://www.linkedin.com/in/juancamilogarcesviveros/"
+              target="_blank"
+            >
+              <i
+                class="fab fa-linkedin-in"
+              />
+            </a>
+          </span>
+          <span
+            class="card-presentation__container-icons-twitter-icon"
+          >
+            <a
+              href="https://twitter.com/Camilo_GarcesV"
+              target="_blank"
+            >
+              <i
+                class="fab fa-twitter"
+              />
+            </a>
+          </span>
+        </div>
+      </article>
+      <article
+        class="card-presentation"
+      >
+        <figure
+          class="card-presentation__image-card"
+        >
+          <img
+            alt=""
+            src="enrique.jpeg"
+          />
+           
+        </figure>
+        <p
+          class="card-presentation__title-name"
+        >
+          Enrique Pérez
+        </p>
+        <p
+          class="card-presentation__title-job-title"
+        >
+          Data Scientist/Backend Developer
+        </p>
+        <div
+          class="card-presentation__container-icons"
+        >
+          <span
+            class="card-presentation__container-icons-linkedin-icon"
+          >
+            <a
+              href="https://www.linkedin.com/in/enriqueeperez/"
+              target="_blank"
+            >
+              <i
+                class="fab fa-linkedin-in"
+              />
+            </a>
+          </span>
+          <span
+            class="card-presentation__container-icons-twitter-icon"
+          >
+            <a
+              href="https://twitter.com/EnriqueePerez"
+              target="_blank"
+            >
+              <i
+                class="fab fa-twitter"
+              />
+            </a>
+          </span>
+        </div>
+      </article>
+      <article
+        class="card-presentation"
+      >
+        <figure
+          class="card-presentation__image-card"
+        >
+          <img
+            alt=""
+            src="jorge.jpg"
+          />
+           
+        </figure>
+        <p
+          class="card-presentation__title-name"
+        >
+          Jorge Alberto Delgadillo Alonso
+        </p>
+        <p
+          class="card-presentation__title-job-title"
+        >
+          Data Scientist/Backend Developer
+        </p>
+        <div
+          class="card-presentation__container-icons"
+        >
+          <span
+            class="card-presentation__container-icons-linkedin-icon"
+          >
+            <a
+              href="https://www.linkedin.com/in/jorge-alberto-delgadillo-alonso-7b58501aa/"
+              target="_blank"
+            >
+              <i
+                class="fab fa-linkedin-in"
+              />
+            </a>
+          </span>
+          <span
+            class="card-presentation__container-icons-twitter-icon"
+          >
+            <a
+              href="https://twitter.com/jorge64311416"
+              target="_blank"
+            >
+              <i
+                class="fab fa-twitter"
+              />
+            </a>
+          </span>
+        </div>
+      </article>
+    </section>
+  </main>
+</DocumentFragment>
+`;

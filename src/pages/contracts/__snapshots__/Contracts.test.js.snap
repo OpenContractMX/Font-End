@@ -22,6 +22,19 @@ exports[`[render content \`statistic / Contracts\`] 1`] = `
         </button>
       </a>
     </nav>
+    <span
+      class="container-contracts__text"
+    >
+      Estas en la cantegoría: 
+      <span
+        class="container-contracts__text--category"
+      >
+         
+      </span>
+      <span
+        class="container-contracts__text--year"
+      />
+    </span>
     <section
       class="filter-time"
     >

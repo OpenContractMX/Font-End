@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[render component \`pages / Home\`] 1`] = `
+<DocumentFragment>
+  <main
+    class="home"
+  >
+    <h1
+      class="home__title"
+    >
+      OpenContractMX
+    </h1>
+    <h2
+      class="home__subtitle"
+    >
+      Bienvenido, en esta plataforma podrás encontrar información y estadísticas de interés referente a Contratos Federales.
+    </h2>
+    <p
+      class="home__paragraph"
+    >
+      1. Puedes filtrar por dependencias y año.
+    </p>
+    <div
+      class="home__container-example"
+    >
+      <figure
+        class="home__container-example--img"
+      >
+        <img
+          alt="Imagen ilustrativa paso 1"
+          src="filtrar.jpg"
+        />
+      </figure>
+    </div>
+    <p
+      class="home__paragraph"
+    >
+      2. Observar un total de contratos e inversión.
+    </p>
+    <div
+      class="home__container-example"
+    >
+      <figure
+        class="home__container-example--img"
+      >
+        <img
+          alt="Imagen ilustrativa paso 2"
+          src="cardDatosContratos.png"
+        />
+      </figure>
+    </div>
+    <p
+      class="home__paragraph"
+    >
+      3. Ver todos los contratos de manera detallada por mes o por trimestre.
+    </p>
+    <div
+      class="home__container-example"
+    >
+      <figure
+        class="home__container-example--img"
+      >
+        <img
+          alt="Imagen ilustrativa paso 3"
+          src="verTodos.jpg"
+        />
+      </figure>
+    </div>
+    <p
+      class="home__paragraph"
+    >
+      4. Puedes ver el Top 10 de contratos por gastos.
+    </p>
+    <div
+      class="home__container-example"
+    >
+      <figure
+        class="home__container-example--img"
+      >
+        <img
+          alt="Imagen ilustrativa paso 4"
+          src="top10.jpg"
+        />
+      </figure>
+    </div>
+    <p
+      class="home__paragraph"
+    >
+      5. Observar el número de contratos por mes.
+    </p>
+    <div
+      class="home__container-example"
+    >
+      <figure
+        class="home__container-example--img"
+      >
+        <img
+          alt="Imagen ilustrativa paso 5"
+          src="contXmes.jpg"
+        />
+      </figure>
+    </div>
+    <p
+      class="home__paragraph"
+    >
+      6. Y un tiempo de ejecución promedio para estos contratos de la dependencia detallada.
+    </p>
+    <div
+      class="home__container-example"
+    >
+      <figure
+        class="home__container-example--img"
+      >
+        <img
+          alt="Imagen ilustrativa paso 7"
+          src="ejecProm.png"
+        />
+      </figure>
+    </div>
+    <p
+      class="home__paragraph"
+    >
+      Toda la información que puede ser obtenida por esta aplicación fue rescatada y procesada tal y como era en el 14 de mayo del 2021 en esta entrada en el portal de la 
+      <a
+        href="https://datos.gob.mx/busca/dataset/concentrado-de-contrataciones-abiertas-de-la-apf-shcp/resource/aa36c461-a1d3-4373-bfb5-ca479ed86f26?inner_span=True"
+        target="_blank"
+      >
+         SHCP
+      </a>
+      (Secretaria de Haciendo y Crédito Público).
+    </p>
+    <div
+      class="home__container-chart"
+    >
+      <figure
+        class="home__container-chart--logo"
+      >
+        <img
+          alt="Imagen del Home"
+          src="chartHome.png"
+        />
+      </figure>
+    </div>
+  </main>
+</DocumentFragment>
+`;

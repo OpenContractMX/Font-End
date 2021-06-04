@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[render content \`component / CarPresentation\`] 1`] = `
+<DocumentFragment>
+  <article
+    class="card-presentation"
+  >
+    <figure
+      class="card-presentation__image-card"
+    >
+      <img
+        alt=""
+        src="img"
+      />
+       
+    </figure>
+    <p
+      class="card-presentation__title-name"
+    >
+      name
+    </p>
+    <p
+      class="card-presentation__title-job-title"
+    >
+      text
+    </p>
+    <div
+      class="card-presentation__container-icons"
+    >
+      <span
+        class="card-presentation__container-icons-linkedin-icon"
+      >
+        <a
+          href="link"
+          target="_blank"
+        >
+          <i
+            class="fab fa-linkedin-in"
+          />
+        </a>
+      </span>
+      <span
+        class="card-presentation__container-icons-twitter-icon"
+      >
+        <a
+          href="link"
+          target="_blank"
+        >
+          <i
+            class="fab fa-twitter"
+          />
+        </a>
+      </span>
+    </div>
+  </article>
+</DocumentFragment>
+`;
