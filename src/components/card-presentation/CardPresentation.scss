@@ -32,15 +32,11 @@
     font-weight: 500;
   }
   &__title-job-title {
-    margin-top: $sizeParagraphsMobile;
     @include subTittleMobile;
     font-weight: 500;
   }
   &__container-icons {
     margin-top: $sizeParagraphsMobile;
-    // display: flex;
-    // flex-wrap: wrap;
-    // margin: 0 auto;
     &-linkedin-icon {
       width: 30px;
       height: 30px;
@@ -49,7 +45,7 @@
         color: $color-dark-light;
         font-size: 30px;
         &:hover {
-          color: $color-dark-primary;
+          color: $color-primary;
         }
       }
     }
@@ -61,9 +57,23 @@
         color: $color-dark-light;
         font-size: 30px;
         &:hover {
-          color: $color-dark-primary;
+          color: $color-primary;
         }
       }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .card-presentation {
+    &__title-name {
+      margin-top: $sizeParagraphsTablet;
+      @include subTitleTablet;
+    }
+    &__title-job-title {
+      @include subTitleTablet;
+    }
+    &__container-icons {
+      margin-top: $sizeParagraphsTablet;
     }
   }
 }
