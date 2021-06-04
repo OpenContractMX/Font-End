@@ -43,6 +43,7 @@ exports[`[render component \`pages / AboutUs\`] 1`] = `
           >
             <a
               href="https://www.linkedin.com/in/leo-rincon/"
+              rel="noreferrer"
               target="_blank"
             >
               <i
@@ -55,6 +56,7 @@ exports[`[render component \`pages / AboutUs\`] 1`] = `
           >
             <a
               href="https://twitter.com/LeoBotache7"
+              rel="noreferrer"
               target="_blank"
             >
               <i
@@ -94,6 +96,7 @@ exports[`[render component \`pages / AboutUs\`] 1`] = `
           >
             <a
               href="https://www.linkedin.com/in/juancamilogarcesviveros/"
+              rel="noreferrer"
               target="_blank"
             >
               <i
@@ -106,6 +109,7 @@ exports[`[render component \`pages / AboutUs\`] 1`] = `
           >
             <a
               href="https://twitter.com/Camilo_GarcesV"
+              rel="noreferrer"
               target="_blank"
             >
               <i
@@ -145,6 +149,7 @@ exports[`[render component \`pages / AboutUs\`] 1`] = `
           >
             <a
               href="https://www.linkedin.com/in/enriqueeperez/"
+              rel="noreferrer"
               target="_blank"
             >
               <i
@@ -157,6 +162,7 @@ exports[`[render component \`pages / AboutUs\`] 1`] = `
           >
             <a
               href="https://twitter.com/EnriqueePerez"
+              rel="noreferrer"
               target="_blank"
             >
               <i
@@ -196,6 +202,7 @@ exports[`[render component \`pages / AboutUs\`] 1`] = `
           >
             <a
               href="https://www.linkedin.com/in/jorge-alberto-delgadillo-alonso-7b58501aa/"
+              rel="noreferrer"
               target="_blank"
             >
               <i
@@ -208,6 +215,7 @@ exports[`[render component \`pages / AboutUs\`] 1`] = `
           >
             <a
               href="https://twitter.com/jorge64311416"
+              rel="noreferrer"
               target="_blank"
             >
               <i
