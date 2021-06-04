@@ -17,9 +17,7 @@
   &__image-card {
     display: block;
     & img {
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
+      object-fit: cover;
       border-radius: 50%;
       margin-left: auto;
       margin-right: auto;
