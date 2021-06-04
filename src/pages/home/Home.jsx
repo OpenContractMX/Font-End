@@ -59,17 +59,8 @@ export const Home = () => {
           <img src={contXmesComponentImg} alt="Imagen ilustrativa paso 5" />
         </figure>
       </div>
-      <p className="home__paragraph">6. Detallar los tipos de contratos.</p>
-      <div className="home__container-example">
-        <figure className="home__container-example--img">
-          <img
-            src={tipoContratosComponentImg}
-            alt="Imagen ilustrativa paso 6"
-          />
-        </figure>
-      </div>
       <p className="home__paragraph">
-        7. Y un tiempo de ejecución promedio para estos contratos de la
+        6. Y un tiempo de ejecución promedio para estos contratos de la
         dependencia detallada.
       </p>
       <div className="home__container-example">
@@ -84,7 +75,10 @@ export const Home = () => {
         Toda la información que puede ser obtenida por esta aplicación fue
         rescatada y procesada tal y como era en el 14 de mayo del 2021 en esta
         entrada en el portal de la{" "}
-        <a href="https://datos.gob.mx/busca/dataset/concentrado-de-contrataciones-abiertas-de-la-apf-shcp/resource/aa36c461-a1d3-4373-bfb5-ca479ed86f26?inner_span=True">
+        <a
+          href="https://datos.gob.mx/busca/dataset/concentrado-de-contrataciones-abiertas-de-la-apf-shcp/resource/aa36c461-a1d3-4373-bfb5-ca479ed86f26?inner_span=True"
+          target="_blank"
+        >
           {" "}
           SHCP
         </a>

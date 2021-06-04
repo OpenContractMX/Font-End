@@ -48,6 +48,9 @@
       & i {
         color: $color-dark-light;
         font-size: 30px;
+        &:hover {
+          color: $color-dark-primary;
+        }
       }
     }
     &-twitter-icon {
@@ -57,6 +60,9 @@
       & i {
         color: $color-dark-light;
         font-size: 30px;
+        &:hover {
+          color: $color-dark-primary;
+        }
       }
     }
   }

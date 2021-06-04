@@ -3,21 +3,27 @@
 @import "../../assets/scss/mixins";
 
 .about-us {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  margin-bottom: 60px;
   width: 95%;
-  max-width: 1024px;
-  &__title {
+  display: flex;
+  justify-content: center;
+  &__container {
     width: 90%;
-    height: auto;
-    margin: 0 auto;
-    margin-top: $sizeSubtitleMobile;
-    text-align: center;
-    & h2 {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1024px;
+    justify-content: center;
+    margin-top: 40px;
+    &--title {
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+      margin-top: $sizeSubtitleMobile;
+      text-align: center;
       @include tittleMobile;
       font-weight: 500;
       color: $color-dark-primary;
+      margin-bottom: 40px;
     }
   }
 }
