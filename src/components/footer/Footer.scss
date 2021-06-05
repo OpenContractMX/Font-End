@@ -13,7 +13,15 @@
   align-items: center;
 
   &--Copyright {
-    @include tittleMobile;
+    @include subTittleMobile;
     color: $color-light-primary;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    &--Copyright {
+      @include tittleMobile;
+    }
   }
 }

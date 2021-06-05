@@ -21,7 +21,7 @@ export const Contracts = () => {
 
   const changeOfName = (data) => {
     if (data === "comunicacion_transporte") {
-      return "Comunicación y Tranpoosrte";
+      return "Comunicación y Transporte";
     }
     if (data === "seguridad") {
       return "Seguridad";
@@ -58,7 +58,7 @@ export const Contracts = () => {
     <main className="container-contracts">
       <NavOfContracts />
       <span className="container-contracts__text">
-        Estas en la cantegoría:{" "}
+        Estas en la categoría:{" "}
         <span className="container-contracts__text--category">
           {changeOfName(category)}{" "}
         </span>
