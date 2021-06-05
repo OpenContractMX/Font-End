@@ -35,7 +35,7 @@ export const Contracts = () => {
     if (data === "economia") {
       return "Economía";
     }
-    if (data === "gobernacio") {
+    if (data === "gobernacion") {
       return "Gobernación";
     }
     if (data === "medio_ambiente") {
