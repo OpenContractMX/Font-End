@@ -33,8 +33,14 @@
   }
 
   &__nav {
-    display: inline-flex;
-    align-items: center;
-    // position: relative;
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    &__nav {
+      display: inline-flex;
+    }
   }
 }

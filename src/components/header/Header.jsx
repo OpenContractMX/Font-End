@@ -15,7 +15,9 @@ export const Header = () => {
         </figure>
         <span className="header__container-logo--name">OpenContractMX</span>
       </div>
-      <HamburgerMenu className="header__nav--list" />
+      <div className="header__nav">
+        <HamburgerMenu className="header__nav--list" />
+      </div>
     </header>
   );
 };
