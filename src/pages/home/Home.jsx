@@ -88,7 +88,7 @@ export const Home = () => {
             {" "}
             SHCP
           </a>
-          (Secretaria de Haciendo y Crédito Público).
+          (Secretaria de Hacienda y Crédito Público).
         </p>
         <div className="home__container-chart">
           <figure className="home__container-chart--logo">
