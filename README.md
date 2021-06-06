@@ -1,75 +1,101 @@
-# Frontend
 
-OpenContracMX challenge #4 of Platzi Master.
+# OpenContractMX
 
-# Getting Started with Create React App
+## Description
+This respository contains de Frontend code of the project,
+this includes all the components, pages, assets and their respective tests.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+If you want to check the Backend repository, go [here](https://github.com/OpenContractMX/Backend). If you want to check the Data Science repository, go [here](https://github.com/OpenContractMX/DataScience).
 
-## Available Scripts
+## Project Summary
+OpenContractMX is a project developed by Platzi Master Students in order to catch more than 350,000 public contracts published by the Government of Mexico and show them in a easy way for reporters, researchers and similars so they can get great information about how the goverment spents in the different areas
 
-In the project directory, you can run:
 
-### `yarn start`
+## Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [React](https://reactjs.org/)
+- [Sass](https://sass-lang.com/)
+- [Axios](https://axios-http.com/docs/intro)
+- [Recharts](https://recharts.org/en-US/)
+  
+## Getting Started
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Prerequisites**
+- npm
+```bash
+  npm install npm@latest -g
+```
+  or 
+```bash
+npm install --global yarn
+```
+Clone the project
 
-### `yarn test`
+```bash
+  git clone https://github.com/OpenContractMX/Frontend.git
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Go to the project directory
 
-### `yarn build`
+```bash
+  cd Frontend
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  npm install
+```
+  or 
+```bash
+  yarn install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Start the server
 
-### `yarn eject`
+```bash
+  npm run start
+```
+  or 
+```bash
+  yarn start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  
+## Screenshots
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This menu allows navigation through the web app.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Menu Screenshot](https://res.cloudinary.com/dqxmukogz/image/upload/v1622955107/OpenContractMX/Captura_de_pantalla_de_2021-06-05_23-47-07_hlfyzv.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+At **Inicio**(Home's page) you could find a quick instruction list for app's usage.
 
-## Learn More
+![Inicio Screenshot](https://res.cloudinary.com/dqxmukogz/image/upload/v1622954898/OpenContractMX/Captura_de_pantalla_de_2021-06-05_23-46-38_fjaja0.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+At **Estadística**(Statistic's page) you could interact with the app making a contracts search by category and year.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Estadística Screenshot](https://res.cloudinary.com/dqxmukogz/image/upload/v1622954898/OpenContractMX/Captura_de_pantalla_de_2021-06-05_23-47-30_tfba9i.png)
 
-### Code Splitting
+At **Sobre Nosotros**(About Us's page) you could find info about developers that made this app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Sobre Nosotros Screenshot](https://res.cloudinary.com/dqxmukogz/image/upload/v1622955780/OpenContractMX/Captura_de_pantalla_de_2021-06-05_23-47-41_boo2rf.png)
 
-### Analyzing the Bundle Size
+  
+## Running Tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To run tests, run the following command
 
-### Making a Progressive Web App
+```bash
+  npm run test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Deployment
 
-### Advanced Configuration
+We deployed the Frontend application in heroku, you can find the link [here]().
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+If you want to see the Backend deployment that it is using this Frontend, please go [here](https://opencontractsmx.herokuapp.com/).
 
-### Deployment
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-OpenContracMX challenge #4 of Platzi Master.
+Distributed under the MIT License. See LICENSE for more information.
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
