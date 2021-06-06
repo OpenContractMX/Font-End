@@ -91,11 +91,11 @@ To run tests, run the following command
 
 ## Deployment
 
-We deployed the Frontend application in heroku, you can find the link [here]().
+We deployed the Frontend application in heroku, you can find the link [here](https://opencontractmx.netlify.app/).
 
 If you want to see the Backend deployment that it is using this Frontend, please go [here](https://opencontractsmx.herokuapp.com/).
 
 ## License
 
-Distributed under the MIT License. See LICENSE for more information.
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+Distributed under the MIT License. See [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) for more information.
+
