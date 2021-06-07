@@ -91,7 +91,7 @@ To run tests, run the following command
 
 ## Deployment
 
-We deployed the Frontend application in heroku, you can find the link [here](https://opencontractmx.netlify.app/).
+We deployed the Frontend application in Netlify, you can find the link [here](https://opencontractmx.netlify.app/).
 
 If you want to see the Backend deployment that it is using this Frontend, please go [here](https://opencontractsmx.herokuapp.com/).
 
