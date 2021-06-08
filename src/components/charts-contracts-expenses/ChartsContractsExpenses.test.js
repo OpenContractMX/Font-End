@@ -3,6 +3,15 @@ import "@testing-library/jest-dom/extend-expect";
 import { render } from "@testing-library/react";
 import { ChartsContractsExpenses } from "./";
 
+jest.mock("recharts", () => {
+  const MockResponsiveContainer = (props) => <div {...props} />;
+
+  return {
+    ...jest.requireActual("recharts"),
+    ResponsiveContainer: MockResponsiveContainer,
+  };
+});
+
 it("[render content `statistic / ChartsContractsExpenses`]", () => {
   const contractsChars = {
     contracts_number: "0",

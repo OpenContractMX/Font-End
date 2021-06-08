@@ -17,7 +17,6 @@ export const Contracts = () => {
 
   const { search } = useLocation();
   const { category, year } = queryString.parse(search);
-  console.log(typeof category);
 
   const changeOfName = (data) => {
     if (data === "comunicacion_transporte") {
