@@ -27,13 +27,17 @@ main {
     &__paragraph {
       @include ParagraphsMobile;
       color: $color-dark-primary;
-      margin: $sizeLogoMobile 0;
+      margin: 40px 0 70px 0;
     }
-
-    &__paragraph--use {
+    &__title--h3-question {
       color: $color-dark-primary;
-      margin: 24px 0 0 0;
+      @include tittleMobile;
+      margin: 12px 0;
+    }
+    &__title--h3 {
+      color: $color-dark-primary;
       @include subTittleMobile;
+      margin: 12px 0;
     }
 
     &__container-example {
@@ -46,6 +50,8 @@ main {
         margin-left: auto;
         margin-right: auto;
         display: block;
+        border: 1px dashed #676464;
+        padding: 10px;
         & img {
           margin-left: auto;
           margin-right: auto;
@@ -90,7 +96,6 @@ main {
       &__paragraph {
         @include ParagraphsTablet;
         color: $color-dark-primary;
-        margin: $sizeLogoTablet 0;
         &--link {
           color: $color-primary;
           &:hover {
@@ -107,6 +112,23 @@ main {
       }
       &__container-chart {
         margin: $sizeLogoTablet 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    & .home {
+      &__title--h3-question {
+        color: $color-dark-primary;
+        @include titleTablet;
+        margin: 12px 0;
+      }
+      &__title--h3 {
+        color: $color-dark-primary;
+        @include subTitleTablet;
+        margin: 12px 0;
       }
     }
   }

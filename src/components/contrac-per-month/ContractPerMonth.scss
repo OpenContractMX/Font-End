@@ -17,6 +17,12 @@
   &--chart-wrap {
     width: 80%;
     margin-left: -40px;
+
+    &-description {
+      color: $color-dark-primary;
+      @include ParagraphsTablet;
+      opacity: 0.9;
+    }
   }
 
   &--chart {
