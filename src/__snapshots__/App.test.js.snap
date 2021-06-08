@@ -242,7 +242,7 @@ exports[`render content 1`] = `
         >
            SHCP
         </a>
-        (Secretaria de Haciendo y Crédito Público).
+        (Secretaria de Hacienda y Crédito Público).
       </p>
       <div
         class="home__container-chart"
@@ -264,7 +264,7 @@ exports[`render content 1`] = `
     <p
       class="footer--Copyright"
     >
-      Copyright
+      Copyright© Made with 🧡 from LATAM to the 🌎
     </p>
   </footer>
 </DocumentFragment>

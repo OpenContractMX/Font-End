@@ -135,7 +135,7 @@ exports[`[render component \`pages / Home\`] 1`] = `
         >
            SHCP
         </a>
-        (Secretaria de Haciendo y Crédito Público).
+        (Secretaria de Hacienda y Crédito Público).
       </p>
       <div
         class="home__container-chart"
