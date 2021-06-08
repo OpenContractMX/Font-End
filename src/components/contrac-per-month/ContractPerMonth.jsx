@@ -100,6 +100,13 @@ export const ContractPerMonth = ({ contractsChars }) => {
             />
           </LineChart>
         </ResponsiveContainer>
+        <p className="container__contract-month--chart-wrap-description">
+          En la grafica podran observar la cantidad de contratos que se
+          ejecutaron por mes de la categoria y año seleccionado.{" "}
+          <strong> Sobre el eje X</strong> se muestran los meses del año,{" "}
+          <strong> sobre el eje Y </strong>
+          veran el número de contratos ejecutados en ese mes.
+        </p>
       </div>
     </section>
   );

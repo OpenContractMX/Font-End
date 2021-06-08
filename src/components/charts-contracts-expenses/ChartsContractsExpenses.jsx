@@ -70,6 +70,12 @@ export const ChartsContractsExpenses = ({ contractsChars }) => {
             <Bar dataKey="inversion" fill={"#fdac41"} />
           </BarChart>
         </ResponsiveContainer>
+        <p className="container__contract-expense--expenses-wrap-description">
+          En la grafica podran observar el top 10 de los contratos mas costos de
+          la categoria y año seleccionado. <strong> Sobre el eje X</strong>{" "}
+          veran el ID de cada contrato, <strong> sobre el eje Y </strong>se
+          muestra el costo total de dicho contrato.
+        </p>
       </div>
       <div className="container__contract-expense--wrap">
         {contracts[0].amount !== 0

@@ -6,7 +6,6 @@ import topDiezComponentImg from "../../assets/img/top10.png";
 import contXmesComponentImg from "../../assets/img/contXmes.png";
 import ejecucionPromedioComponentImg from "../../assets/img/ejecProm.png";
 import verTodosComponentImg from "../../assets/img/verTodos.png";
-import chartHomeImg from "../../assets/img/chartHome.png";
 export const Home = () => {
   return (
     <main>
@@ -16,20 +15,20 @@ export const Home = () => {
           Bienvenido, en esta plataforma podrás encontrar información y
           estadísticas de interés referente a Contratos Federales de México.
         </h2>
-        <p className="home__paragraph--use">
-          Cómo puedes usar nuestra plataforma?
-        </p>
-        <p className="home__paragraph">
+        <h3 className="home__title--h3-question">
+          ¿Cómo puedes usar nuestra plataforma?
+        </h3>
+        <h3 className="home__title--h3">
           1. Puedes filtrar por Categoría y año.
-        </p>
+        </h3>
         <div className="home__container-example">
           <figure className="home__container-example--img">
             <img src={filtrarComponentImg} alt="Imagen ilustrativa paso 1" />
           </figure>
         </div>
-        <p className="home__paragraph">
+        <h3 className="home__title--h3">
           2. Observar un total de contratos e inversión.
-        </p>
+        </h3>
         <div className="home__container-example">
           <figure className="home__container-example--img">
             <img
@@ -38,35 +37,35 @@ export const Home = () => {
             />
           </figure>
         </div>
-        <p className="home__paragraph">
+        <h3 className="home__title--h3">
           3. Ver todos los contratos de manera detallada por mes o por
           trimestre.
-        </p>
+        </h3>
         <div className="home__container-example">
           <figure className="home__container-example--img">
             <img src={verTodosComponentImg} alt="Imagen ilustrativa paso 3" />
           </figure>
         </div>
-        <p className="home__paragraph">
+        <h3 className="home__title--h3">
           4. Puedes ver el Top 10 de contratos por gastos.
-        </p>
+        </h3>
         <div className="home__container-example">
           <figure className="home__container-example--img">
             <img src={topDiezComponentImg} alt="Imagen ilustrativa paso 4" />
           </figure>
         </div>
-        <p className="home__paragraph">
+        <h3 className="home__title--h3">
           5. Observar el número de contratos por mes.
-        </p>
+        </h3>
         <div className="home__container-example">
           <figure className="home__container-example--img">
             <img src={contXmesComponentImg} alt="Imagen ilustrativa paso 5" />
           </figure>
         </div>
-        <p className="home__paragraph">
+        <h3 className="home__title--h3">
           6. Y un tiempo de ejecución promedio para estos contratos de la
           categoría detallada.
-        </p>
+        </h3>
         <div className="home__container-example">
           <figure className="home__container-example--img">
             <img
@@ -90,11 +89,6 @@ export const Home = () => {
           </a>
           (Secretaria de Hacienda y Crédito Público).
         </p>
-        <div className="home__container-chart">
-          <figure className="home__container-chart--logo">
-            <img src={chartHomeImg} alt="Imagen del Home" />
-          </figure>
-        </div>
       </section>
     </main>
   );

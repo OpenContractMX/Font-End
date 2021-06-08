@@ -16,6 +16,13 @@
   }
   &--expenses-wrap {
     width: 80%;
+
+    &-description {
+      text-align: center;
+      color: $color-dark-primary;
+      @include ParagraphsTablet;
+      opacity: 0.9;
+    }
   }
   &--chart {
     width: 280px;

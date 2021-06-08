@@ -12,10 +12,6 @@ export const FilterCategory = ({ filter, setFilter }) => {
 
   const categorys = [
     {
-      key: "Categoría",
-      value: "Categoría",
-    },
-    {
       key: "Seguridad",
       value: "seguridad",
     },
@@ -61,7 +57,7 @@ export const FilterCategory = ({ filter, setFilter }) => {
     },
   ];
 
-  const years = ["Año", 2015, 2016, 2017, 2018];
+  const years = [2015, 2016, 2017, 2018];
 
   return (
     <section className="filter-category">
@@ -77,6 +73,9 @@ export const FilterCategory = ({ filter, setFilter }) => {
             onChange={handleOnChangeCategory}
             value={filter.category}
           >
+            <option key="Categoría" value="Categoría" selected hidden>
+              Categoría
+            </option>
             {categorys.map((category, index) => (
               <option key={index} value={category.value}>
                 {category.key}
@@ -95,6 +94,9 @@ export const FilterCategory = ({ filter, setFilter }) => {
             onChange={handleOnChangeYear}
             value={filter.year}
           >
+            <option key="Año" value="Año" selected hidden>
+              Año
+            </option>
             {years.map((year, index) => (
               <option key={index} value={year}>
                 {year}
